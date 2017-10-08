@@ -52,3 +52,5 @@ Felhasználók
 *	/users/:id			adott felhasználó
 *	/users/:id/reviews		adott felhasználó értékelései
 
+
+![alt text](https://raw.githubusercontent.com/Tremx389/restaurant/master/db.png)
