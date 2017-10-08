@@ -1,7 +1,4 @@
 ## Alkalmazások Fejlesztése Beadandó - Étterem
-Godzsák Dávid
-Szabó Bendegúz
-
 * vannak éttermek, ételek/italok (étlap), városok, userek, meg akár értékelések
 * városra szűrve lehetne éttermet választani
 * éttermet kiválasztva megkapjuk az étlapot meg az értékelést
