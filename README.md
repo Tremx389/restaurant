@@ -1,6 +1,7 @@
 
 ### 1)	Funkciók
 •	város alapján lehet étteremre szűrni
+
 •	egy étterem aloldalon megjelennek a hozzá tartozó értékelések és az étlap
 •	egy felhasználó értékelheti az éttermet
 •	új étterem hozzáadása / módosítása / törlése
