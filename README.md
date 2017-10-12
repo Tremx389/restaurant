@@ -28,7 +28,10 @@ Felhasználók
 *	felhasználónév: string
 *	jelszó: password
 
-### 2)	REST Api
+### 2)	Adatbázis terv
+![alt text](https://raw.githubusercontent.com/Tremx389/restaurant/master/db.png)
+
+### 3)	REST Api
 Frontend – oldalak megjelenítése (route)
 *	/restaurants			éttermek listája
 *	/restaurants/:id		egy specifikus étterem
@@ -62,6 +65,5 @@ Backend – REST végpontok műveletekhez
 
 *	GET: /api/users/ – felhasználók lekérdezése (belépett user)
 
+## 4) Use case
 
-
-![alt text](https://raw.githubusercontent.com/Tremx389/restaurant/master/db.png)
