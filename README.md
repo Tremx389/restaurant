@@ -1,21 +1,9 @@
 ## Alkalmazások Fejlesztése Beadandó - Étterem
-* vannak éttermek, ételek/italok (étlap), városok, userek, meg akár értékelések
-* városra szűrve lehetne éttermet választani
-* éttermet kiválasztva megkapjuk az étlapot meg az értékelést
-* nyílván akkor lehet értékelni is, userrel mentve
+Az alapötlet egy éttermek keresésével és értékelésével foglalkozó alkalmazás lenne. Különböző szűrőket használva tudunk éttermekre keresni, mint például városra lebontva vagy értékelés alapján rendezve. Ezen belül megtekinthetjük az adott éttermet részletesen (étlap, értékelések, cím, stb.), mi is értékelhetjük.
+Polgármester jogosultsággal mi is hozzáadhatunk további városokat a meglévőkhöz. Étteremvezetőként nyithatunk új éttermet az adott városban – miután a polgármester elfogadta -, majd összeállíthatjuk a saját étlapunkat az étterem számára. Ezen kívül új ételt/italt vehetünk fel a listához. Egyszerű felhasználóként lehetőségünk van különböző éttermek értékelésére.
 
-### 1)	Funkciók
-*	város alapján lehet étteremre szűrni
-*	egy étterem aloldalon megjelennek a hozzá tartozó értékelések és az étlap
-*	egy felhasználó értékelheti az éttermet
-*	új étterem hozzáadása / módosítása / törlése
-*	új város hozzáadása / módosítása / törlése
-*	új étel v. ital hozzáadása / módosítása / törlése
-További ötletek
-*	étel/ital (étlap) alapján szűrés (hogy melyik étteremben lehet kapni)
-*	értékelés alapján listázás
 
-### 2)	Adattáblák
+### 1)	Adattáblák
 Éttermek (Restaurants)
 *	azonosító: int
 *	név: string
@@ -40,7 +28,8 @@ Felhasználók
 *	felhasználónév: string
 *	jelszó: password
 
-### 3)	REST végpontok
+### 2)	REST Api
+Frontend – oldalak megjelenítése (route)
 *	/restaurants			éttermek listája
 *	/restaurants/:id		egy specifikus étterem
 *	/restaurants/:id/reviews	az adott étterem értékelései
@@ -51,6 +40,28 @@ Felhasználók
 *	/users				felhasználók listája
 *	/users/:id			adott felhasználó
 *	/users/:id/reviews		adott felhasználó értékelései
+
+Backend – REST végpontok műveletekhez
+*	POST: /api/restaurants/ – étterem hozzáadása (étteremvezető)
+*	GET: /api/restaurants/ – éttermek lekérdezése (belépett user)
+*	GET: /api/restaurants/:id – adott étterem lekérdezése (belépett user)
+*	PUT: /api/restaurants/:id – adott étterem módosítása (étteremvezető)
+*	DELETE: /api/restaurants/:id – adott étterem törlése (étteremvezető)
+
+*	POST: /api/cities/ – város hozzáadása (polgármester)
+*	GET: /api/cities/ – városok lekérdezése (belépett user)
+*	GET: /api/cities/:id – adott város éttermeinek lekérdezése (belépett user)
+*	PUT: /api/cities/:id – adott város módosítása (polgármester)
+*	DELETE: /api/cities/:id – adott város törlése a listából (polgármester)
+
+*	POST: /api/reviews/ – értékelés hozzáadása (belépett user)
+*	GET: /api/reviews/ – értékelések lekérdezése (belépett user)
+*	GET: /api/reviews/:id – adott értékelés lekérdezése (belépett user)
+*	PUT: /api/reviews/:id – adott értékelés módosítása (tulajdonos user)
+*	DELETE: /api/reviews/:id – adott értékelés törlése a listából (tulajdonos user)
+
+*	GET: /api/users/ – felhasználók lekérdezése (belépett user)
+
 
 
 ![alt text](https://raw.githubusercontent.com/Tremx389/restaurant/master/db.png)
