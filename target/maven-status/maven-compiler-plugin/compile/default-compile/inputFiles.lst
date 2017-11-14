@@ -1,0 +1,15 @@
+C:\Users\Gabesz\Projects\Alk-fejl\issue-tracker\src\main\java\hu\elte\alkfejl\issuetracker\api\UserApiController.java
+C:\Users\Gabesz\Projects\Alk-fejl\issue-tracker\src\main\java\hu\elte\alkfejl\issuetracker\model\BaseEntity.java
+C:\Users\Gabesz\Projects\Alk-fejl\issue-tracker\src\main\java\hu\elte\alkfejl\issuetracker\model\Issue.java
+C:\Users\Gabesz\Projects\Alk-fejl\issue-tracker\src\main\java\hu\elte\alkfejl\issuetracker\service\UserService.java
+C:\Users\Gabesz\Projects\Alk-fejl\issue-tracker\src\main\java\hu\elte\alkfejl\issuetracker\repository\UserRepository.java
+C:\Users\Gabesz\Projects\Alk-fejl\issue-tracker\src\main\java\hu\elte\alkfejl\issuetracker\model\IssueMessage.java
+C:\Users\Gabesz\Projects\Alk-fejl\issue-tracker\src\main\java\hu\elte\alkfejl\issuetracker\service\IssueService.java
+C:\Users\Gabesz\Projects\Alk-fejl\issue-tracker\src\main\java\hu\elte\alkfejl\issuetracker\api\IssueApiController.java
+C:\Users\Gabesz\Projects\Alk-fejl\issue-tracker\src\main\java\hu\elte\alkfejl\issuetracker\service\exceptions\UserNotValidException.java
+C:\Users\Gabesz\Projects\Alk-fejl\issue-tracker\src\main\java\hu\elte\alkfejl\issuetracker\IssueTrackerApplication.java
+C:\Users\Gabesz\Projects\Alk-fejl\issue-tracker\src\main\java\hu\elte\alkfejl\issuetracker\controller\UserController.java
+C:\Users\Gabesz\Projects\Alk-fejl\issue-tracker\src\main\java\hu\elte\alkfejl\issuetracker\model\User.java
+C:\Users\Gabesz\Projects\Alk-fejl\issue-tracker\src\main\java\hu\elte\alkfejl\issuetracker\service\annotations\Role.java
+C:\Users\Gabesz\Projects\Alk-fejl\issue-tracker\src\main\java\hu\elte\alkfejl\issuetracker\config\AuthInterceptor.java
+C:\Users\Gabesz\Projects\Alk-fejl\issue-tracker\src\main\java\hu\elte\alkfejl\issuetracker\repository\IssueRepository.java
