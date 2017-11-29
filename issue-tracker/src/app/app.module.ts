@@ -15,10 +15,12 @@ import { IssueListComponent } from './pages/issues/issue-list/issue-list.compone
 import {MaterialItemsModule} from "./MaterialItemsModule";
 import { MenuComponent } from './components/menu/menu.component';
 import { NewIssueComponent } from './pages/issues/new-issue/new-issue.component';
-import { StatsComponent } from './pages/stats/stats.component';
 import {IssueService} from "./services/issue.service";
-import { HelpComponent } from './pages/help/help.component';
 import { ErrorComponent } from './pages/error/error.component';
+import { RestaurantComponent } from './pages/restaurant/restaurant.component';
+import { ReviewComponent } from './pages/review/review.component';
+import { CityComponent } from './pages/city/city.component';
+import { UserComponent } from './pages/user/user.component';
 
 @NgModule({
   declarations: [
@@ -29,9 +31,11 @@ import { ErrorComponent } from './pages/error/error.component';
     IssueListComponent,
     MenuComponent,
     NewIssueComponent,
-    StatsComponent,
-    HelpComponent,
-    ErrorComponent
+    ErrorComponent,
+    RestaurantComponent,
+    ReviewComponent,
+    CityComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
