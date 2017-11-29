@@ -18,9 +18,9 @@ import { IssueListComponent } from './pages/issues/issue-list/issue-list.compone
 import { NewIssueComponent } from './pages/issues/new-issue/new-issue.component';
 import { IssueService } from "./services/issue.service";
 
-// import { IssueDetailComponent } from './pages/restaurant/restaurant-detail/restaurant-detail.component';
+import { RestaurantDetailComponent } from './pages/restaurant/restaurant-detail/restaurant-detail.component';
 import { RestaurantListComponent } from './pages/restaurant/restaurant-list/restaurant-list.component';
-// import { NewIssueComponent } from './pages/restaurant/new-restaurant/new-restaurant.component';
+import { RestaurantNewComponent } from './pages/restaurant/restaurant-new/restaurant-new.component';
 import { RestaurantService } from "./services/restaurant.service";
 
 import { ErrorComponent } from './pages/error/error.component';
@@ -33,12 +33,17 @@ import { UserComponent } from './pages/user/user.component';
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    IssueDetailComponent,
-    IssueListComponent,
-    MenuComponent,
-    NewIssueComponent,
     ErrorComponent,
+    MenuComponent,
+    
+    IssueListComponent,
+    IssueDetailComponent,
+    NewIssueComponent,
+
     RestaurantListComponent,
+    RestaurantDetailComponent,
+    RestaurantNewComponent,
+
     ReviewComponent,
     CityComponent,
     UserComponent

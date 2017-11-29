@@ -1,8 +1,8 @@
 <div class="page-body">
   <h2 class="mat-h2">Restaurants</h2>
-  <a mat-raised-button routerLink="/restaurant/new" class="mat-primary">Add new issue</a>
+  <a mat-raised-button routerLink="/restaurant/new" class="mat-primary">Add new Restaurant</a>
 
-  <mat-table #table [dataSource]="restaurant">
+  <mat-table #table [dataSource]="restaurants">
     <ng-container matColumnDef="description">
       <mat-header-cell *matHeaderCellDef> Description</mat-header-cell>
       <mat-cell *matCellDef="let element"> {{element.description}}</mat-cell>
@@ -34,5 +34,4 @@
     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
     <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
   </mat-table>
-
 </div>

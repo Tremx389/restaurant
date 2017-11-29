@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 import {DataSource} from "@angular/cdk/collections";
 import {Observable} from "rxjs/Observable";
 import "rxjs/add/observable/of";
-import {Restaurant, RestaurantStatus} from "../../../model/Restaurant";
+import {Restaurant} from "../../../model/Restaurant";
 import {RestaurantService} from "../../../services/restaurant.service";
 
 @Component({
@@ -27,10 +27,10 @@ export class RestaurantListComponent {
   }
 }
 
-const data: Restaurant[] = [
-  new Restaurant('description', 'location', RestaurantStatus.ADDED, new Date(), undefined, 1),
-  new Restaurant('elromlott a tábla', '0.420', RestaurantStatus.ADDED, new Date(), undefined, 2)
-];
+// const data: Restaurant[] = [
+//   new Restaurant(1, 'Muxik vazze', 'Vár', 1),
+//   new Restaurant(1, 'ÉS MÉG MINDIG!!', 'Lágymányosi híd', 2),
+// ];
 
 export class RestaurantDataSource extends DataSource<any> {
   constructor(private restaurantService: RestaurantService) {
