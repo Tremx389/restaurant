@@ -52,7 +52,7 @@ import { UserComponent } from './pages/user/user.component';
     BrowserAnimationsModule,
     MaterialItemsModule
   ],
-  providers: [AuthService, IssueService],
+  providers: [AuthService, IssueService, RestaurantService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

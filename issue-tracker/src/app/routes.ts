@@ -19,7 +19,6 @@ import {ReviewComponent} from "./pages/review/review.component";
 import {UserComponent} from "./pages/user/user.component";
 
 export const appRoutes: Routes = [
-  {path: '', redirectTo: 'restaurant', pathMatch: 'full'},
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
   
