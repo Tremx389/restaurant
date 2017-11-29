@@ -7,7 +7,13 @@ import {IssueDetailComponent} from "./pages/issues/issue-detail/issue-detail.com
 import {NewIssueComponent} from "./pages/issues/new-issue/new-issue.component";
 
 import {ErrorComponent} from "./pages/error/error.component";
-import {RestaurantComponent} from "./pages/restaurant/restaurant.component";
+
+
+import {RestaurantListComponent} from "./pages/restaurant/restaurant-list/restaurant-list.component";
+// import {IssueDetailComponent} from "./pages/issues/issue-detail/issue-detail.component";
+// import {NewIssueComponent} from "./pages/issues/new-issue/new-issue.component";
+
+
 import {CityComponent} from "./pages/city/city.component";
 import {ReviewComponent} from "./pages/review/review.component";
 import {UserComponent} from "./pages/user/user.component";
@@ -22,7 +28,8 @@ export const appRoutes: Routes = [
   {path: 'issues/new', component: NewIssueComponent},
   {path: 'issues/:id', component: IssueDetailComponent},
 
-  {path: 'restaurant', component: RestaurantComponent},
+  {path: 'restaurant', component: RestaurantListComponent},
+  
   {path: 'city', component: CityComponent},
   {path: 'review', component: ReviewComponent},
   {path: 'user', component: UserComponent},

@@ -10,14 +10,20 @@ import {AuthService} from "./services/auth.service";
 import {HttpModule} from "@angular/http";
 import { RegisterComponent } from './pages/register/register.component';
 import  {appRoutes} from './routes';
-import { IssueDetailComponent } from './pages/issues/issue-detail/issue-detail.component';
-import { IssueListComponent } from './pages/issues/issue-list/issue-list.component';
 import {MaterialItemsModule} from "./MaterialItemsModule";
 import { MenuComponent } from './components/menu/menu.component';
+
+import { IssueDetailComponent } from './pages/issues/issue-detail/issue-detail.component';
+import { IssueListComponent } from './pages/issues/issue-list/issue-list.component';
 import { NewIssueComponent } from './pages/issues/new-issue/new-issue.component';
-import {IssueService} from "./services/issue.service";
+import { IssueService } from "./services/issue.service";
+
+// import { IssueDetailComponent } from './pages/restaurant/restaurant-detail/restaurant-detail.component';
+import { RestaurantListComponent } from './pages/restaurant/restaurant-list/restaurant-list.component';
+// import { NewIssueComponent } from './pages/restaurant/new-restaurant/new-restaurant.component';
+import { RestaurantService } from "./services/restaurant.service";
+
 import { ErrorComponent } from './pages/error/error.component';
-import { RestaurantComponent } from './pages/restaurant/restaurant.component';
 import { ReviewComponent } from './pages/review/review.component';
 import { CityComponent } from './pages/city/city.component';
 import { UserComponent } from './pages/user/user.component';
@@ -32,7 +38,7 @@ import { UserComponent } from './pages/user/user.component';
     MenuComponent,
     NewIssueComponent,
     ErrorComponent,
-    RestaurantComponent,
+    RestaurantListComponent,
     ReviewComponent,
     CityComponent,
     UserComponent
