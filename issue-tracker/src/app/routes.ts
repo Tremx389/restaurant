@@ -18,12 +18,11 @@ import {ReviewListComponent} from "./pages/review/review-list/review-list.compon
 import {ReviewDetailComponent} from "./pages/review/review-detail/review-detail.component";
 import {ReviewNewComponent} from "./pages/review/review-new/review-new.component";
 
-import {UserComponent} from "./pages/user/user.component";
-// todo: rest
+import {UserListComponent} from "./pages/user/user-list/user-list.component";
 
-
-// tooo: redirect
 export const appRoutes: Routes = [
+  {path: '', redirectTo: '/restaurant', pathMatch: 'full'},
+
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
   
@@ -39,7 +38,7 @@ export const appRoutes: Routes = [
   {path: 'review/new', component: ReviewNewComponent},
   {path: 'review/:id', component: ReviewDetailComponent},
 
-  {path: 'user', component: UserComponent},
+  {path: 'user', component: UserListComponent},
 
   {path: '**', component: ErrorComponent},
 ];

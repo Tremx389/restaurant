@@ -28,7 +28,10 @@ import { ReviewListComponent } from "./pages/review/review-list/review-list.comp
 import { ReviewNewComponent } from "./pages/review/review-new/review-new.component";
 import { ReviewService } from "./services/review.service";
 
-import { UserComponent } from "./pages/user/user.component";
+import { UserListComponent } from "./pages/user/user-list/user-list.component";
+import { UserService } from "./services/user.service";
+
+// import { UserComponent } from "./pages/user/user.component";
 
 import { ErrorComponent } from "./pages/error/error.component";
 
@@ -52,8 +55,8 @@ import { ErrorComponent } from "./pages/error/error.component";
     ReviewDetailComponent,
     ReviewNewComponent,
 
-    UserComponent
-  ],
+    UserListComponent,
+ ],
   imports: [
     BrowserModule,
     FormsModule,
@@ -63,7 +66,7 @@ import { ErrorComponent } from "./pages/error/error.component";
     BrowserAnimationsModule,
     MaterialItemsModule
   ],
-  providers: [AuthService, RestaurantService, CityService, ReviewService],
+  providers: [AuthService, RestaurantService, CityService, ReviewService, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
