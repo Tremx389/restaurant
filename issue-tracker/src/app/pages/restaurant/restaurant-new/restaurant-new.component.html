@@ -1,25 +1,37 @@
 <div class="page-body">
   <h2 class="mat-h2">New Restaurant</h2>
   <form [formGroup]="restaurantForm" novalidate>
+
     <div class="form-control">
       <mat-form-field class="example-full-width">
-        <input matInput placeholder="Description" formControlName="description">
-        <mat-error *ngIf="description.hasError('required')">
-          Description is <strong>required</strong>
+        <input matInput placeholder="Name" formControlName="name">
+        <mat-error *ngIf="name.hasError('required')">
+          Name is <strong>required</strong>
         </mat-error>
       </mat-form-field>
     </div>
 
     <div class="form-control">
       <mat-form-field class="example-full-width">
-        <input matInput placeholder="Location" formControlName="location">
-        <mat-error *ngIf="location.hasError('required')">
-          Location is <strong>required</strong>
+        <input matInput placeholder="Address" formControlName="address">
+        <mat-error *ngIf="address.hasError('required')">
+          Address is <strong>required</strong>
         </mat-error>
       </mat-form-field>
     </div>
+
+    <!-- todo: option box for cities -->
+    <div class="form-control">
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="City" formControlName="city_id">
+        <mat-error *ngIf="city_id.hasError('required')">
+          City is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+    </div>
+
 
     <button mat-raised-button class="mat-primary" (click)="submit()" [disabled]="!restaurantForm.valid">Send</button>
-    <a mat-button class="mat-accent" routerLink="/restaurants">Back</a>
+    <a mat-button class="mat-accent" routerLink="/restaurant">Back</a>
   </form>
 </div>

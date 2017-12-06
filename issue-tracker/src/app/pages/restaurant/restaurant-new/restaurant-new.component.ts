@@ -10,8 +10,9 @@ import {RestaurantService} from "../../../services/restaurant.service";
 })
 export class RestaurantNewComponent implements OnInit {
   restaurantForm: FormGroup = new FormGroup({
-    description: new FormControl('', [Validators.required]),
-    location: new FormControl('', [Validators.required])
+    name: new FormControl('', [Validators.required]),
+    address: new FormControl('', [Validators.required]),
+    city_id: new FormControl('', [Validators.required])
   });
 
   constructor(private restaurantService: RestaurantService) {
@@ -21,16 +22,22 @@ export class RestaurantNewComponent implements OnInit {
   ngOnInit() {
   }
 
-  get location() {
-    return this.restaurantForm.get('location')
+  get address() {
+    return this.restaurantForm.get('address')
   }
 
-  get description() {
-    return this.restaurantForm.get('description')
+  get name() {
+    return this.restaurantForm.get('name')
+  }
+
+
+  get city_id() {
+    return this.restaurantForm.get('city_id')
   }
 
   submit() {
-    this.restaurantService.create(new Restaurant(this.description.value, this.location.value))
+    // todo: id
+    this.restaurantService.create(new Restaurant(1, this.name.value, this.address.value, this.city_id.value))
       .subscribe(
         res => res,
         err => console.log(err)

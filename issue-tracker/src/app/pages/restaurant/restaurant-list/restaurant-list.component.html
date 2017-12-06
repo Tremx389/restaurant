@@ -3,24 +3,19 @@
   <a mat-raised-button routerLink="/restaurant/new" class="mat-primary">Add new Restaurant</a>
 
   <mat-table #table [dataSource]="restaurants">
-    <ng-container matColumnDef="description">
-      <mat-header-cell *matHeaderCellDef> Description</mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.description}}</mat-cell>
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef> Name</mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.name}}</mat-cell>
     </ng-container>
 
-    <ng-container matColumnDef="location">
-      <mat-header-cell *matHeaderCellDef> Location</mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.location}}</mat-cell>
+    <ng-container matColumnDef="address">
+      <mat-header-cell *matHeaderCellDef> Address</mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.address}}</mat-cell>
     </ng-container>
 
-    <ng-container matColumnDef="status">
-      <mat-header-cell *matHeaderCellDef> Status</mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.status}}</mat-cell>
-    </ng-container>
-
-    <ng-container matColumnDef="timestamp">
-      <mat-header-cell *matHeaderCellDef> Timestamp</mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.timeStamp | date}}</mat-cell>
+    <ng-container matColumnDef="city_id">
+      <mat-header-cell *matHeaderCellDef> City</mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.city_id}}</mat-cell>
     </ng-container>
 
     <ng-container matColumnDef="edit">

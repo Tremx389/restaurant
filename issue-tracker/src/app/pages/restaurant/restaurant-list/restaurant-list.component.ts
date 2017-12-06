@@ -12,7 +12,7 @@ import {RestaurantService} from "../../../services/restaurant.service";
 })
 
 export class RestaurantListComponent {
-  displayedColumns: String[] = ['description', 'location', 'status', 'timestamp', 'edit'];
+  displayedColumns: String[] = ['name', 'address', 'city_id'];
   restaurants: DataSource<any> = new RestaurantDataSource(this.restaurantService);
 
   constructor(private restaurantService: RestaurantService) {

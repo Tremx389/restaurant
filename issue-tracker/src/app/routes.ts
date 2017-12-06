@@ -4,39 +4,41 @@ import {RegisterComponent} from "./pages/register/register.component";
 
 import {ErrorComponent} from "./pages/error/error.component";
 
-import {IssueListComponent} from "./pages/issues/issue-list/issue-list.component";
-import {IssueDetailComponent} from "./pages/issues/issue-detail/issue-detail.component";
-import {NewIssueComponent} from "./pages/issues/new-issue/new-issue.component";
-
 // Beadandó
 
 import {RestaurantListComponent} from "./pages/restaurant/restaurant-list/restaurant-list.component";
 import {RestaurantDetailComponent} from "./pages/restaurant/restaurant-detail/restaurant-detail.component";
 import {RestaurantNewComponent} from "./pages/restaurant/restaurant-new/restaurant-new.component";
 
-import {CityComponent} from "./pages/city/city.component";
-// todo: rest
+import {CityListComponent} from "./pages/city/city-list/city-list.component";
+import {CityDetailComponent} from "./pages/city/city-detail/city-detail.component";
+import {CityNewComponent} from "./pages/city/city-new/city-new.component";
 
-import {ReviewComponent} from "./pages/review/review.component";
-// todo: rest
+import {ReviewListComponent} from "./pages/review/review-list/review-list.component";
+import {ReviewDetailComponent} from "./pages/review/review-detail/review-detail.component";
+import {ReviewNewComponent} from "./pages/review/review-new/review-new.component";
 
 import {UserComponent} from "./pages/user/user.component";
 // todo: rest
 
+
+// tooo: redirect
 export const appRoutes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
   
-  {path: 'issues', component: IssueListComponent},
-  {path: 'issues/new', component: NewIssueComponent},
-  {path: 'issues/:id', component: IssueDetailComponent},
-
   {path: 'restaurant', component: RestaurantListComponent},
   {path: 'restaurant/new', component: RestaurantNewComponent},
   {path: 'restaurant/:id', component: RestaurantDetailComponent},
 
-  {path: 'city', component: CityComponent},
-  {path: 'review', component: ReviewComponent},
+  {path: 'city', component: CityListComponent},
+  {path: 'city/new', component: CityNewComponent},
+  {path: 'city/:id', component: CityDetailComponent},
+
+  {path: 'review', component: ReviewListComponent},
+  {path: 'review/new', component: ReviewNewComponent},
+  {path: 'review/:id', component: ReviewDetailComponent},
+
   {path: 'user', component: UserComponent},
 
   {path: '**', component: ErrorComponent},
