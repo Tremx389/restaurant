@@ -74,6 +74,7 @@ Az adatok csak belépett felhasználók számára láthatóak.
 ## 5) Fejlesztői Környezet
 *  Front-end
 *  - Sublime Text 3
+*  - ATOM
 *  - Node.js Command promt
 *  Back-end
 *  - Netbeans IDE
