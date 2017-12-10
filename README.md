@@ -70,3 +70,15 @@ Az adatok csak belépett felhasználók számára láthatóak.
 *  belépett user: városok/éttermek keresése, ezek részletes megtekintése; éttermek értélelése; értékelések/felhasználók listájának megtekintése
 *  polgármester: alap jogosultságokon kívül város hozzáadása/módosítása/törlése illetve új étterem véglegesítése
 *  étteremvezető: alap jogosultságokon kívül étterem hozzáadása/módosítása/törlése illetve új étel/ital hozzáadása/módosítása/törlése
+
+## 5) Fejlesztői Környezet
+*  Front-end
+*  - Sublime Text 3
+*  - ATOM
+*  - Node.js Command promt
+*  Back-end
+*  - Netbeans IDE
+*  Verziókövetés
+*  - Git
+*  Task Management
+*  - Wunderlist
