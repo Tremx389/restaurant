@@ -4,6 +4,7 @@ export class Routes {
   static LOGOUT: String = 'user/logout';
   static ISSUES: String = 'issues';
   static RESTAURANTS: String = 'restaurants';
+  static REVIEWS: String = 'reviews';
   static CITIES: String = 'cities';
 }
 
