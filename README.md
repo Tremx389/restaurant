@@ -1,50 +1,50 @@
-## Alkalmazások Fejlesztése Beadandó - Étterem
+# Projektötlet - Étterem
 Az alapötlet egy éttermek keresésével és értékelésével foglalkozó alkalmazás lenne. Különböző szűrőket használva tudunk éttermekre keresni, mint például városra lebontva vagy értékelés alapján rendezve. Ezen belül megtekinthetjük az adott éttermet részletesen (étlap, értékelések, cím, stb.), mi is értékelhetjük.
 Polgármester jogosultsággal mi is hozzáadhatunk további városokat a meglévőkhöz. Étteremvezetőként nyithatunk új éttermet az adott városban – miután a polgármester elfogadta -, majd összeállíthatjuk a saját étlapunkat az étterem számára. Ezen kívül új ételt/italt vehetünk fel a listához. Egyszerű felhasználóként lehetőségünk van különböző éttermek értékelésére.
 
+Az adatok csak belépett felhasználók számára láthatóak.
+*  belépett user: városok/éttermek keresése, ezek részletes megtekintése; éttermek értélelése; értékelések/felhasználók listájának megtekintése
+*  polgármester: alap jogosultságokon kívül város hozzáadása/módosítása/törlése illetve új étterem véglegesítése
+*  étteremvezető: alap jogosultságokon kívül étterem hozzáadása/módosítása/törlése illetve új étel/ital hozzáadása/módosítása/törlése
 
-### 1)	Adattáblák
-Éttermek (Restaurants)
+# Backend
+
+## Fejlesztői környezet
+
+## Adatbázis terv
+![alt text](https://raw.githubusercontent.com/Tremx389/restaurant/master/db.png)
+
+### Éttermek (Restaurants)
 *	azonosító: int
 *	név: string
 *	város: (Város) azonosító		amelyik városban található
 *	cím: string
-Városok (Cities)
+
+### Városok (Cities)
 *	azonosító: int
 *	név: string
-Étlapok (Menus)
+
+### Étlapok (Menus)
 *	azonosító: id
 *	típus: string		„food” vagy „drink”
 *	név: string
 *	étterem: (Étterem) azonosító		amelyik étteremben felszolgálják
-Értékelések (Reviews)
+
+### Értékelések (Reviews)
 *	azonosító: int
 *	étterem: (Étterem) azonosító
 *	user: (User azonosító)
 *	értékelés: int		1-5 fokú skála
 *	üzenet: string
-Felhasználók
+
+### Felhasználók
 *	azonosító: int
 *	felhasználónév: string
 *	jelszó: password
 
-### 2)	Adatbázis terv
-![alt text](https://raw.githubusercontent.com/Tremx389/restaurant/master/db.png)
+## Könyvtárstruktúra
 
-### 3)	REST Api
-Frontend – oldalak megjelenítése (route)
-*	/restaurants			éttermek listája
-*	/restaurants/:id		egy specifikus étterem
-*	/restaurants/:id/reviews	az adott étterem értékelései
-*	/restaurants/:id/menus		adott étterem étlapja
-*	/reviews			értékelések listája
-*	/cities				városok listája
-*	/cities/:id			kilistázza az adott város éttermeit
-*	/users				felhasználók listája
-*	/users/:id			adott felhasználó
-*	/users/:id/reviews		adott felhasználó értékelései
-
-Backend – REST végpontok műveletekhez
+## Végpont-tervek és leírások
 *	POST: /api/restaurants/ – étterem hozzáadása (étteremvezető)
 *	GET: /api/restaurants/ – éttermek lekérdezése (belépett user)
 *	GET: /api/restaurants/:id – adott étterem lekérdezése (belépett user)
@@ -65,11 +65,18 @@ Backend – REST végpontok műveletekhez
 
 *	GET: /api/users/ – felhasználók lekérdezése (belépett user)
 
-## 4) Jogosultságok
-Az adatok csak belépett felhasználók számára láthatóak.
-*  belépett user: városok/éttermek keresése, ezek részletes megtekintése; éttermek értélelése; értékelések/felhasználók listájának megtekintése
-*  polgármester: alap jogosultságokon kívül város hozzáadása/módosítása/törlése illetve új étterem véglegesítése
-*  étteremvezető: alap jogosultságokon kívül étterem hozzáadása/módosítása/törlése illetve új étel/ital hozzáadása/módosítása/törlése
+### 3)	REST Api
+Frontend – oldalak megjelenítése (route)
+*	/restaurants			éttermek listája
+*	/restaurants/:id		egy specifikus étterem
+*	/restaurants/:id/reviews	az adott étterem értékelései
+*	/restaurants/:id/menus		adott étterem étlapja
+*	/reviews			értékelések listája
+*	/cities				városok listája
+*	/cities/:id			kilistázza az adott város éttermeit
+*	/users				felhasználók listája
+*	/users/:id			adott felhasználó
+*	/users/:id/reviews		adott felhasználó értékelései
 
 ## 5) Fejlesztői Környezet
 *  Front-end
