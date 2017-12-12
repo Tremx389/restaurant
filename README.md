@@ -73,7 +73,7 @@ Az adatok csak belépett felhasználók számára láthatóak.
 *	PUT: /api/reviews/:id – adott értékelés módosítása (tulajdonos user)
 *	DELETE: /api/reviews/:id – adott értékelés törlése a listából (tulajdonos user)
 
-*	POST: /api/menu/ – menü elem hozzáadása (belépett user)
+*	POST: /api/menu/ – menü elem hozzáadása (étteremvezető user)
 *	GET: /api/menu/ – menü elemek lekérdezése (belépett user)
 *	GET: /api/menu/:id – adott menü elem lekérdezése (belépett user)
 *	PUT: /api/menu/:id – adott menü elem módosítása (étteremvezető user)
