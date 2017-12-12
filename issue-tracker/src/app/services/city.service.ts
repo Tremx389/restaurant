@@ -11,7 +11,7 @@ export class CityService {
   constructor(private http: Http) {
   }
 
-  getCitys(): Observable<City[]> {
+  getCities(): Observable<City[]> {
     return this.http.get(Server.routeTo(Routes.CITIES))
       .map(res => res.json())
   }
@@ -27,17 +27,12 @@ export class CityService {
   }
 
   read(id: number) {
-    return this.http.get(Server.routeTo(Routes.RESTAURANTS) + '/' + id)
+    return this.http.get(Server.routeTo(Routes.CITIES) + '/' + id)
       .map(res => res.json())
   }
 
   update(city: City) {
-    return this.http.put(Server.routeTo(Routes.RESTAURANTS) + '/' + city.id, city)
-      .map(res => res.json())
-  }
-
-  sendMessage(id: number, message: String) {
-    return this.http.post(Server.routeTo(Routes.RESTAURANTS + '/' + id + '/message'), {message})
+    return this.http.put(Server.routeTo(Routes.CITIES) + '/' + city.id, city)
       .map(res => res.json())
   }
 }
