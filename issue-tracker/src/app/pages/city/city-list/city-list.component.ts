@@ -12,25 +12,24 @@ import {CityService} from "../../../services/city.service";
 })
 
 export class CityListComponent {
-  displayedColumns: String[] = ['name'];
-  citys: DataSource<any> = new CityDataSource(this.cityService);
+  displayedColumns: String[] = ['name','edit'];
+  cities: DataSource<any> = new CityDataSource(this.cityService);
 
   constructor(private cityService: CityService) {
   }
 
   delete(id: number) {
-    this.cityService.delete(id)
+    if (confirm('Are you sure you want to delete this city?')) {
+      this.cityService.delete(id)
       .subscribe(
         res => console.log(res),
-        err => console.log(err)
+        err => console.log("err:",err)
       );
-  }
-}
+    }
 
-// const data: City[] = [
-//   new City(1, 'Muxik vazze', 'Vár', 1),
-//   new City(1, 'ÉS MÉG MINDIG!!', 'Lágymányosi híd', 2),
-// ];
+  }
+
+}
 
 export class CityDataSource extends DataSource<any> {
   constructor(private cityService: CityService) {
@@ -38,7 +37,7 @@ export class CityDataSource extends DataSource<any> {
   }
 
   connect(): Observable<City[]> {
-    return this.cityService.getCitys();
+    return this.cityService.getCities();
   }
 
   disconnect() {
