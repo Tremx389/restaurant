@@ -10,6 +10,16 @@ Az adatok csak belépett felhasználók számára láthatóak.
 # Backend
 
 ## Fejlesztői környezet
+*  Front-end
+*  - Sublime Text 3
+*  - ATOM
+*  - Node.js Command promt
+*  Back-end
+*  - Netbeans IDE
+*  Verziókövetés
+*  - Git
+*  Task Management
+*  - Wunderlist
 
 ## Adatbázis terv
 ![alt text](https://raw.githubusercontent.com/Tremx389/restaurant/master/db.png)
@@ -77,15 +87,3 @@ Frontend – oldalak megjelenítése (route)
 *	/users				felhasználók listája
 *	/users/:id			adott felhasználó
 *	/users/:id/reviews		adott felhasználó értékelései
-
-## 5) Fejlesztői Környezet
-*  Front-end
-*  - Sublime Text 3
-*  - ATOM
-*  - Node.js Command promt
-*  Back-end
-*  - Netbeans IDE
-*  Verziókövetés
-*  - Git
-*  Task Management
-*  - Wunderlist
