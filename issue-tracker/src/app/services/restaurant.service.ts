@@ -17,6 +17,7 @@ export class RestaurantService {
   }
 
   create(restaurant: Restaurant): Observable<Restaurant> {
+    console.log(restaurant)
     return this.http.post(Server.routeTo(Routes.RESTAURANTS), restaurant)
       .map(res => res.json())
   }

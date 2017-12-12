@@ -12,7 +12,7 @@ export class RestaurantNewComponent implements OnInit {
   restaurantForm: FormGroup = new FormGroup({
     name: new FormControl('', [Validators.required]),
     address: new FormControl('', [Validators.required]),
-    city_id: new FormControl('', [Validators.required])
+    // city_id: new FormControl('', [Validators.required])
   });
 
   constructor(private restaurantService: RestaurantService) {
@@ -31,13 +31,15 @@ export class RestaurantNewComponent implements OnInit {
   }
 
 
-  get city_id() {
-    return this.restaurantForm.get('city_id')
-  }
+  // get city_id() {
+  //   return this.restaurantForm.get('city_id')
+  // }
 
   submit() {
-    // todo: id
-    this.restaurantService.create(new Restaurant(1, this.name.value, this.address.value, this.city_id.value))
+    const id = Math.floor(Math.random()*10000000)
+    const newRestaurant = new Restaurant(id, this.name.value, this.address.value, 0, 0)
+    console.log(newRestaurant)
+    this.restaurantService.create(newRestaurant)
       .subscribe(
         res => res,
         err => console.log(err)

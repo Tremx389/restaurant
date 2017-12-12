@@ -20,18 +20,6 @@
       </mat-form-field>
     </div>
 
-    <!-- todo: option box for cities -->
-    <div class="form-control">
-      <mat-form-field class="example-full-width">
-        <input matInput placeholder="City" formControlName="city_id">
-        <mat-error *ngIf="city_id.hasError('required')">
-          City is <strong>required</strong>
-        </mat-error>
-      </mat-form-field>
-    </div>
-
-
     <button mat-raised-button class="mat-primary" (click)="submit()" [disabled]="!restaurantForm.valid">Send</button>
-    <a mat-button class="mat-accent" routerLink="/restaurant">Back</a>
   </form>
 </div>
