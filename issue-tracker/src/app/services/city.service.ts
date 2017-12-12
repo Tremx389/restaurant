@@ -12,17 +12,17 @@ export class CityService {
   }
 
   getCitys(): Observable<City[]> {
-    return this.http.get(Server.routeTo(Routes.RESTAURANTS))
+    return this.http.get(Server.routeTo(Routes.CITIES))
       .map(res => res.json())
   }
 
   create(city: City): Observable<City> {
-    return this.http.post(Server.routeTo(Routes.RESTAURANTS), city)
+    return this.http.post(Server.routeTo(Routes.CITIES), city)
       .map(res => res.json())
   }
 
   delete(id: number) {
-    return this.http.delete(Server.routeTo(Routes.RESTAURANTS) + '/' + id)
+    return this.http.delete(Server.routeTo(Routes.CITIES) + '/' + id)
       .map(res => res.json())
   }
 

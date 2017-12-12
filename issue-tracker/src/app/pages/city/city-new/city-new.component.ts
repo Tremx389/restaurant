@@ -26,8 +26,10 @@ export class CityNewComponent implements OnInit {
 
 
   submit() {
-    // todo: id
-    this.cityService.create(new City(1, this.name.value))
+    const id = Math.floor(Math.random()*10000000)
+    const newCity = new City(id, this.name.value)
+
+    this.cityService.create(newCity)
       .subscribe(
         res => res,
         err => console.log(err)
