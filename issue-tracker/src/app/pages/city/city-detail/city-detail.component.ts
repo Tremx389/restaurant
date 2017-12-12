@@ -10,7 +10,6 @@ import {ActivatedRoute, Router} from "@angular/router";
 })
 export class CityDetailComponent implements OnInit {
   city: City = new City();
-  message: String = '';
   id: number;
 
   constructor(private cityService: CityService,
@@ -30,16 +29,8 @@ export class CityDetailComponent implements OnInit {
       )
   }
 
-  updateStatus() {
+  update() {
     this.cityService.update(this.city)
-      .subscribe(
-        city => console.log('ok'),
-        err => console.log(err)
-      )
-  }
-
-  submit() {
-    this.cityService.sendMessage(this.city.id, this.message)
       .subscribe(
         city => console.log('ok'),
         err => console.log(err)
