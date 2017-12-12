@@ -26,4 +26,12 @@ public class MenuService {
     public void delete(int id) {
         menuRepository.delete(id);
     }
+    
+    public Menu update(int id, Menu menu) {
+        Menu currentMenu = menuRepository.findOne(id);
+
+        currentMenu.setType(menu.getType());
+        currentMenu.setName(menu.getName());
+        return menuRepository.save(currentMenu);
+    }
 }
