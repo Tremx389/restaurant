@@ -18,7 +18,7 @@ public class CityApiController {
     @Autowired
     private CityService cityService;
     
-    @Role({USER, MAJOR, BOSS})
+    //@Role({USER, MAJOR, BOSS})
     @GetMapping
     private ResponseEntity<Iterable<City>> list() {
         Iterable<City> cities = cityService.cities();
@@ -34,7 +34,7 @@ public class CityApiController {
     }
     
     
-    @Role({USER, MAJOR, BOSS})
+    //@Role({USER, MAJOR, BOSS})
     @GetMapping("/{id}")
     private ResponseEntity<City> read(@PathVariable String id) {
         City read = cityService.read(Integer.parseInt(id));
