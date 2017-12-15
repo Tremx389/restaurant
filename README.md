@@ -21,6 +21,59 @@ Az adatok csak belépett felhasználók számára láthatóak.
 *  Task Management
 *  - Wunderlist
 
+## Könyvtár struktúra
+### Front-end
+├───app<br />
+│   ├───components<br />
+│   │   └───menu<br />
+│   ├───model<br />
+│   ├───pages<br />
+│   │   ├───city<br />
+│   │   │   ├───city-detail<br />
+│   │   │   ├───city-list<br />
+│   │   │   └───city-new<br />
+│   │   ├───error<br />
+│   │   ├───login<br />
+│   │   ├───register<br />
+│   │   ├───restaurant<br />
+│   │   │   ├───restaurant-detail<br />
+│   │   │   ├───restaurant-list<br />
+│   │   │   └───restaurant-new<br />
+│   │   ├───review<br />
+│   │   │   ├───review-detail<br />
+│   │   │   ├───review-list<br />
+│   │   │   └───review-new<br />
+│   │   └───user<br />
+│   │       └───user-list<br />
+│   ├───services<br />
+│   └───utils<br />
+├───assets<br />
+└───environments<br />
+
+### Back-end
+├───main<br />
+│   ├───java<br />
+│   │   └───hu<br />
+│   │       └───elte<br />
+│   │           └───alkfejl<br />
+│   │               └───issuetracker<br />
+│   │                   ├───api<br />
+│   │                   ├───config<br />
+│   │                   ├───controller<br />
+│   │                   ├───model<br />
+│   │                   ├───repository<br />
+│   │                   └───service<br />
+│   │                       ├───annotations<br />
+│   │                       └───exceptions<br />
+│   └───resources<br />
+│       └───templates<br />
+└───test<br />
+    └───java<br />
+        └───hu<br />
+            └───elte<br />
+                └───alkfejl<br />
+                    └───issuetracker<br />
+
 ## Adatbázis terv
 ![alt text](https://raw.githubusercontent.com/Tremx389/restaurant/master/db.png)
 
