@@ -22,7 +22,7 @@ public class ReviewApiController {
     @Autowired
     private UserService userService;
     
-    //@Role({USER, MAJOR, BOSS})
+    @Role({USER, MAJOR, BOSS})
     @GetMapping
     private ResponseEntity<Iterable<Review>> list() {
         Iterable<Review> reviews = reviewService.reviews();
@@ -30,7 +30,7 @@ public class ReviewApiController {
     }
     
     
-    //@Role({USER, MAJOR, BOSS})
+    @Role({USER, MAJOR, BOSS})
     @PostMapping
     private ResponseEntity<Review> create(@RequestBody Review review) {
         Review saved = reviewService.create(review);
@@ -38,21 +38,21 @@ public class ReviewApiController {
     }
     
     
-    //@Role({USER, MAJOR, BOSS})
+    @Role({USER, MAJOR, BOSS})
     @GetMapping("/{id}")
     private ResponseEntity<Review> read(@PathVariable String id) {
         Review read = reviewService.read(Integer.parseInt(id));
         return ResponseEntity.ok(read);
     }
     
-    //@Role(MAJOR)
+    @Role(MAJOR)
     @DeleteMapping("/{id}")
     private ResponseEntity delete(@PathVariable int id) {
         reviewService.delete(id);
         return ResponseEntity.ok().build();
     }
     
-    //@Role({USER, MAJOR, BOSS})
+    @Role({USER, MAJOR, BOSS})
     @PutMapping("/{id}")
     private ResponseEntity<Review> update(@PathVariable int id, @RequestBody Review review) {
         Review updated = reviewService.update(id, review, userService.getUser());
