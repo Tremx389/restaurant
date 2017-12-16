@@ -9,6 +9,7 @@ import hu.elte.alkfejl.issuetracker.model.Menu;
 import static hu.elte.alkfejl.issuetracker.model.User.Role.BOSS;
 import static hu.elte.alkfejl.issuetracker.model.User.Role.MAJOR;
 import static hu.elte.alkfejl.issuetracker.model.User.Role.USER;
+import hu.elte.alkfejl.issuetracker.service.MenuDto;
 import hu.elte.alkfejl.issuetracker.service.MenuService;
 import hu.elte.alkfejl.issuetracker.service.annotations.Role;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,8 +41,8 @@ public class MenuApiController {
    
     //@Role(BOSS)
     @PostMapping
-    private ResponseEntity<Menu> create(@RequestBody Menu menu) {
-        Menu saved = menuService.create(menu);
+    private ResponseEntity<Menu> create(@RequestBody MenuDto menuDto) {
+        Menu saved = menuService.create(menuDto);
         return ResponseEntity.ok(saved);
     }
    
