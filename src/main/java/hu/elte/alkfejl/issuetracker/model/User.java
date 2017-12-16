@@ -41,6 +41,6 @@ public class User extends BaseEntity implements Serializable{
     private List<Review> reviews;
     
     public enum Role {
-        GUEST, USER, MAJOR, BOSS
+        GUEST, USER, MAJOR, BOSS, ADMIN
     }
 }
