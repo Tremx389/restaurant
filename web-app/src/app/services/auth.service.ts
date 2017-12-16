@@ -25,7 +25,7 @@ export class AuthService {
       .map(res => {
         this.isLoggedIn = true;
         const data = res.json();
-        this.user = new User(data.username, data.password, data.email, data.role);
+        this.user = new User(data.username, data.password, data.email, data.role, data.id);
         console.log(this.user)
         return this.user;
       })

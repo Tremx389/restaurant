@@ -25,7 +25,6 @@ import {RestaurantDetailComponent} from "./pages/restaurant/restaurant-detail/re
 import {RestaurantNewComponent} from "./pages/restaurant/restaurant-new/restaurant-new.component";
 
 import {ReviewListComponent} from "./pages/review/review-list/review-list.component";
-import {ReviewDetailComponent} from "./pages/review/review-detail/review-detail.component";
 import {ReviewNewComponent} from "./pages/review/review-new/review-new.component";
 
 import {MenuListComponent} from "./pages/menu/menu-list/menu-list.component";
@@ -55,7 +54,6 @@ import {MenuService} from "./services/menu.service";
     RestaurantListComponent,
     RestaurantNewComponent,
 
-    ReviewDetailComponent,
     ReviewListComponent,
     ReviewNewComponent,
 

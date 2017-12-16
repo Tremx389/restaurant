@@ -11,7 +11,6 @@ import {RestaurantDetailComponent} from "./pages/restaurant/restaurant-detail/re
 import {RestaurantNewComponent} from "./pages/restaurant/restaurant-new/restaurant-new.component";
 
 import {ReviewListComponent} from "./pages/review/review-list/review-list.component";
-import {ReviewDetailComponent} from "./pages/review/review-detail/review-detail.component";
 import {ReviewNewComponent} from "./pages/review/review-new/review-new.component"
 
 import {MenuListComponent} from "./pages/menu/menu-list/menu-list.component";
@@ -30,6 +29,7 @@ export const appRoutes: Routes = [{
     canActivateChild: [RouteGuard],
     children: [
       {path: '', redirectTo: 'login', pathMatch: 'full'},
+
       {path: 'login', component: LoginComponent, data: {roles: [Role.GUEST]}},
       {path: 'register', component: RegisterComponent, data: {roles: [Role.GUEST]}},
 
@@ -47,7 +47,6 @@ export const appRoutes: Routes = [{
 
       {path: 'reviews', component: ReviewListComponent, data: {roles: loggedInUsers}},
       {path: 'reviews/new', component: ReviewNewComponent, data: {roles: [Role.USER, Role.ADMIN]}},
-      {path: 'reviews/:id', component: ReviewDetailComponent, data: {roles: [Role.USER, Role.ADMIN]}},
 
       {path: 'help', component: HelpComponent},
       {path: '**', component: ErrorComponent}
