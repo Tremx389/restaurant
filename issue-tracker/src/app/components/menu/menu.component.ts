@@ -15,9 +15,9 @@ interface MenuItem {
 })
 export class MenuComponent implements OnInit {
   private common: MenuItem[] = [
-    {link: '/cities', title: 'Cities'},
-    {link: '/restaurants', title: 'Resturants'},
+    {link: '/restaurants', title: 'Restaurants'},
     {link: '/reviews', title: 'Reviews'},
+    {link: '/cities', title: 'Cities'},
     {link: '/users', title: 'Users'},
   ];
 
