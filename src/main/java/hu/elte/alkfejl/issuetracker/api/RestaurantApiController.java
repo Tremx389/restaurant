@@ -51,8 +51,8 @@ public class RestaurantApiController {
     
     @Role(MAJOR)
     @PutMapping("/{id}")
-    private ResponseEntity<Restaurant> update(@PathVariable int id, @RequestBody Restaurant restaurant) {
-        Restaurant updated = restaurantService.update(id, restaurant);
+    private ResponseEntity<Restaurant> update(@PathVariable int id, @RequestBody RestaurantDto restaurantDto) {
+        Restaurant updated = restaurantService.update(id, restaurantDto);
         return ResponseEntity.ok(updated);
     }
 }

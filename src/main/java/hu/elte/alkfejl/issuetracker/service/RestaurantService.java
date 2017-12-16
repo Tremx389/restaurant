@@ -41,12 +41,10 @@ public class RestaurantService {
         restaurantRepository.delete(id);
     }
     
-    public Restaurant update(int id, Restaurant restaurant) {
-        Restaurant currentRestaurant = restaurantRepository.findOne(id);
-
-        currentRestaurant.setName(restaurant.getName());
-        currentRestaurant.setAddress(restaurant.getAddress());
-        currentRestaurant.setCity(restaurant.getCity());
+    public Restaurant update(int id, RestaurantDto restaurantDto) {
+        Restaurant currentRestaurant = this.read(id);
+        currentRestaurant.setName(restaurantDto.getName());
+        currentRestaurant.setAddress(restaurantDto.getAddress());
         return restaurantRepository.save(currentRestaurant);
     }
 }
