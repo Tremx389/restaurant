@@ -1,0 +1,32 @@
+<div class="page-body">
+  <h2 class="mat-h2">Restaurants</h2>
+  <a mat-raised-button routerLink="/restaurants/new" class="mat-primary">Add new Restaurant</a>
+
+  <mat-table #table [dataSource]="restaurants">
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef> Name</mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.name}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="address">
+      <mat-header-cell *matHeaderCellDef> Address</mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.address}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="city_id">
+      <mat-header-cell *matHeaderCellDef> City</mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.city_id}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="edit">
+      <mat-header-cell *matHeaderCellDef> Actions</mat-header-cell>
+      <mat-cell *matCellDef="let element">
+        <a mat-button [routerLink]="'/restaurants/' + element.id">Details</a>
+        <button mat-button (click)="delete(element.id)" class="mat-accent">Delete</button>
+      </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+</div>

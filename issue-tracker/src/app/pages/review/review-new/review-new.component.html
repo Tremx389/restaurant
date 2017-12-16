@@ -1,0 +1,26 @@
+<div class="page-body">
+  <h2 class="mat-h2">New Review</h2>
+  <form [formGroup]="reviewForm" novalidate>
+
+    <div class="form-control">
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="User" formControlName="user_id">
+        <mat-error *ngIf="user_id.hasError('required')">
+          User id is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <div class="form-control">
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Retaurant" formControlName="restaurant_id">
+        <mat-error *ngIf="restaurant_id.hasError('required')">
+          Restaurant id is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <button mat-raised-button class="mat-primary" (click)="submit()" [disabled]="!reviewForm.valid">Send</button>
+    <a mat-button class="mat-accent" routerLink="/reviews">Back</a>
+  </form>
+</div>

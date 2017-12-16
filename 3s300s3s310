@@ -1,0 +1,69 @@
+warning: LF will be replaced by CRLF in target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst.
+The file will have its original line endings in your working directory.
+[1mdiff --git a/target/classes/hu/elte/alkfejl/issuetracker/service/ReviewService.class b/target/classes/hu/elte/alkfejl/issuetracker/service/ReviewService.class[m
+[1mindex e34e56e..ee22e1b 100644[m
+Binary files a/target/classes/hu/elte/alkfejl/issuetracker/service/ReviewService.class and b/target/classes/hu/elte/alkfejl/issuetracker/service/ReviewService.class differ
+[1mdiff --git a/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst b/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst[m
+[1mindex c67bb04..bd33fb4 100644[m
+[1m--- a/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst[m
+[1m+++ b/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst[m
+[36m@@ -1,26 +1,27 @@[m
+[31m-C:\Users\Gabesz\Projects\Alk-fejl\tremx_restaurant\src\main\java\hu\elte\alkfejl\issuetracker\service\CityService.java[m
+[31m-C:\Users\Gabesz\Projects\Alk-fejl\tremx_restaurant\src\main\java\hu\elte\alkfejl\issuetracker\repository\ReviewRepository.java[m
+[31m-C:\Users\Gabesz\Projects\Alk-fejl\tremx_restaurant\src\main\java\hu\elte\alkfejl\issuetracker\service\ReviewService.java[m
+[31m-C:\Users\Gabesz\Projects\Alk-fejl\tremx_restaurant\src\main\java\hu\elte\alkfejl\issuetracker\repository\MenuRepository.java[m
+[31m-C:\Users\Gabesz\Projects\Alk-fejl\tremx_restaurant\src\main\java\hu\elte\alkfejl\issuetracker\service\exceptions\UserNotValidException.java[m
+[31m-C:\Users\Gabesz\Projects\Alk-fejl\tremx_restaurant\src\main\java\hu\elte\alkfejl\issuetracker\model\BaseEntity.java[m
+[31m-C:\Users\Gabesz\Projects\Alk-fejl\tremx_restaurant\src\main\java\hu\elte\alkfejl\issuetracker\api\MenuApiController.java[m
+[31m-C:\Users\Gabesz\Projects\Alk-fejl\tremx_restaurant\src\main\java\hu\elte\alkfejl\issuetracker\api\UserApiController.java[m
+[31m-C:\Users\Gabesz\Projects\Alk-fejl\tremx_restaurant\src\main\java\hu\elte\alkfejl\issuetracker\repository\UserRepository.java[m
+[31m-C:\Users\Gabesz\Projects\Alk-fejl\tremx_restaurant\src\main\java\hu\elte\alkfejl\issuetracker\model\Review.java[m
+[31m-C:\Users\Gabesz\Projects\Alk-fejl\tremx_restaurant\src\main\java\hu\elte\alkfejl\issuetracker\config\AuthInterceptor.java[m
+[31m-C:\Users\Gabesz\Projects\Alk-fejl\tremx_restaurant\src\main\java\hu\elte\alkfejl\issuetracker\service\UserService.java[m
+[31m-C:\Users\Gabesz\Projects\Alk-fejl\tremx_restaurant\src\main\java\hu\elte\alkfejl\issuetracker\controller\UserController.java[m
+[31m-C:\Users\Gabesz\Projects\Alk-fejl\tremx_restaurant\src\main\java\hu\elte\alkfejl\issuetracker\api\ReviewApiController.java[m
+[31m-C:\Users\Gabesz\Projects\Alk-fejl\tremx_restaurant\src\main\java\hu\elte\alkfejl\issuetracker\model\Restaurant.java[m
+[31m-C:\Users\Gabesz\Projects\Alk-fejl\tremx_restaurant\src\main\java\hu\elte\alkfejl\issuetracker\api\RestaurantApiController.java[m
+[31m-C:\Users\Gabesz\Projects\Alk-fejl\tremx_restaurant\src\main\java\hu\elte\alkfejl\issuetracker\IssueTrackerApplication.java[m
+[31m-C:\Users\Gabesz\Projects\Alk-fejl\tremx_restaurant\src\main\java\hu\elte\alkfejl\issuetracker\service\MenuService.java[m
+[31m-C:\Users\Gabesz\Projects\Alk-fejl\tremx_restaurant\src\main\java\hu\elte\alkfejl\issuetracker\service\RestaurantService.java[m
+[31m-C:\Users\Gabesz\Projects\Alk-fejl\tremx_restaurant\src\main\java\hu\elte\alkfejl\issuetracker\model\Menu.java[m
+[31m-C:\Users\Gabesz\Projects\Alk-fejl\tremx_restaurant\src\main\java\hu\elte\alkfejl\issuetracker\api\CityApiController.java[m
+[31m-C:\Users\Gabesz\Projects\Alk-fejl\tremx_restaurant\src\main\java\hu\elte\alkfejl\issuetracker\model\User.java[m
+[31m-C:\Users\Gabesz\Projects\Alk-fejl\tremx_restaurant\src\main\java\hu\elte\alkfejl\issuetracker\model\City.java[m
+[31m-C:\Users\Gabesz\Projects\Alk-fejl\tremx_restaurant\src\main\java\hu\elte\alkfejl\issuetracker\service\annotations\Role.java[m
+[31m-C:\Users\Gabesz\Projects\Alk-fejl\tremx_restaurant\src\main\java\hu\elte\alkfejl\issuetracker\repository\CityRepository.java[m
+[31m-C:\Users\Gabesz\Projects\Alk-fejl\tremx_restaurant\src\main\java\hu\elte\alkfejl\issuetracker\repository\RestaurantRepository.java[m
+[32m+[m[32mD:\Projects\alk_fejl\restaurant\src\main\java\hu\elte\alkfejl\issuetracker\repository\ReviewRepository.java[m
+[32m+[m[32mD:\Projects\alk_fejl\restaurant\src\main\java\hu\elte\alkfejl\issuetracker\model\User.java[m
+[32m+[m[32mD:\Projects\alk_fejl\restaurant\src\main\java\hu\elte\alkfejl\issuetracker\repository\CityRepository.java[m
+[32m+[m[32mD:\Projects\alk_fejl\restaurant\src\main\java\hu\elte\alkfejl\issuetracker\service\MenuService.java[m
+[32m+[m[32mD:\Projects\alk_fejl\restaurant\src\main\java\hu\elte\alkfejl\issuetracker\api\UserApiController.java[m
+[32m+[m[32mD:\Projects\alk_fejl\restaurant\src\main\java\hu\elte\alkfejl\issuetracker\service\CityService.java[m
+[32m+[m[32mD:\Projects\alk_fejl\restaurant\src\main\java\hu\elte\alkfejl\issuetracker\model\Review.java[m
+[32m+[m[32mD:\Projects\alk_fejl\restaurant\src\main\java\hu\elte\alkfejl\issuetracker\model\BaseEntity.java[m
+[32m+[m[32mD:\Projects\alk_fejl\restaurant\src\main\java\hu\elte\alkfejl\issuetracker\api\RestaurantApiController.java[m
+[32m+[m[32mD:\Projects\alk_fejl\restaurant\src\main\java\hu\elte\alkfejl\issuetracker\model\City.java[m
+[32m+[m[32mD:\Projects\alk_fejl\restaurant\src\main\java\hu\elte\alkfejl\issuetracker\IssueTrackerApplication.java[m
+[32m+[m[32mD:\Projects\alk_fejl\restaurant\src\main\java\hu\elte\alkfejl\issuetracker\config\AuthInterceptor.java[m
+[32m+[m[32mD:\Projects\alk_fejl\restaurant\src\main\java\hu\elte\alkfejl\issuetracker\api\ReviewApiController.java[m
+[32m+[m[32mD:\Projects\alk_fejl\restaurant\src\main\java\hu\elte\alkfejl\issuetracker\controller\UserController.java[m
+[32m+[m[32mD:\Projects\alk_fejl\restaurant\src\main\java\hu\elte\alkfejl\issuetracker\service\ReviewService.java[m
+[32m+[m[32mD:\Projects\alk_fejl\restaurant\src\main\java\hu\elte\alkfejl\issuetracker\repository\RestaurantRepository.java[m
+[32m+[m[32mD:\Projects\alk_fejl\restaurant\src\main\java\hu\elte\alkfejl\issuetracker\api\MenuApiController.java[m
+[32m+[m[32mD:\Projects\alk_fejl\restaurant\src\main\java\hu\elte\alkfejl\issuetracker\api\CityApiController.java[m
+[32m+[m[32mD:\Projects\alk_fejl\restaurant\src\main\java\hu\elte\alkfejl\issuetracker\service\UserService.java[m
+[32m+[m[32mD:\Projects\alk_fejl\restaurant\src\main\java\hu\elte\alkfejl\issuetracker\model\Menu.java[m
+[32m+[m[32mD:\Projects\alk_fejl\restaurant\src\main\java\hu\elte\alkfejl\issuetracker\repository\UserRepository.java[m
+[32m+[m[32mD:\Projects\alk_fejl\restaurant\src\main\java\hu\elte\alkfejl\issuetracker\service\ReviewDto.java[m
+[32m+[m[32mD:\Projects\alk_fejl\restaurant\src\main\java\hu\elte\alkfejl\issuetracker\service\annotations\Role.java[m
+[32m+[m[32mD:\Projects\alk_fejl\restaurant\src\main\java\hu\elte\alkfejl\issuetracker\service\RestaurantService.java[m
+[32m+[m[32mD:\Projects\alk_fejl\restaurant\src\main\java\hu\elte\alkfejl\issuetracker\repository\MenuRepository.java[m
+[32m+[m[32mD:\Projects\alk_fejl\restaurant\src\main\java\hu\elte\alkfejl\issuetracker\model\Restaurant.java[m
+[32m+[m[32mD:\Projects\alk_fejl\restaurant\src\main\java\hu\elte\alkfejl\issuetracker\service\exceptions\UserNotValidException.java[m
+[1mdiff --git a/target/test-classes/hu/elte/alkfejl/issuetracker/IssueTrackerApplicationTests.class b/target/test-classes/hu/elte/alkfejl/issuetracker/IssueTrackerApplicationTests.class[m
+[1mdeleted file mode 100644[m
+[1mindex 5805e0e..0000000[m
+Binary files a/target/test-classes/hu/elte/alkfejl/issuetracker/IssueTrackerApplicationTests.class and /dev/null differ
+warning: LF will be replaced by CRLF in target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst.
+The file will have its original line endings in your working directory.
