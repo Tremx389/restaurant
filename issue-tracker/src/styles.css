@@ -12,4 +12,40 @@ body {
 
 .page-body {
   margin:50px;
+  border-radius: 3px;
+}
+
+.component-body {
+	background-color: #fff9dd;
+}
+
+.login-body {
+  background-color: #fff9dd;
+  display: inline-block;
+  padding: 30px 40px;
+  border-radius: 3px;
+}
+
+body {
+  background-image: url(https://farm4.staticflickr.com/3364/3345597659_c529f83e45.jpg) !important;
+  background-size: auto 250px;
+}
+
+#top-menu[_ngcontent-c1] {
+  background: #a00e0e !important;
+}
+
+.mat-toolbar-row .center {
+	margin-left: 30px;
+}
+
+.mat-toolbar-row .mat-button {
+	margin-left: 10px;
+	margin-right: 10px;
+
+	border: 2px solid rgba(255,255,255,0.2);
+}
+
+.mat-primary.mat-raised-button {
+	background-color: #a00e0e !important;
 }

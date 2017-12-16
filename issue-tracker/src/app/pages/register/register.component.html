@@ -1,4 +1,5 @@
 <div class="page-body" id="register-page">
+  <div class="login-body">
   <h2 class="mat-h2">Register</h2>
   <form [formGroup]="registerForm" novalidate>
     <div class="form-control">
@@ -34,4 +35,5 @@
     <button mat-raised-button class="mat-primary" (click)="submit()" [disabled]="!registerForm.valid">Register</button>
     <a mat-button class="mat-accent" routerLink="/login">Login</a>
   </form>
+</div>
 </div>
