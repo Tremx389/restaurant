@@ -16,10 +16,6 @@ import { HelpComponent } from './pages/help/help.component';
 import { ErrorComponent } from './pages/error/error.component';
 import {RouteGuard} from "./route.guard";
 
-import { IssueDetailComponent } from './pages/issues/issue-detail/issue-detail.component';
-import { IssueListComponent } from './pages/issues/issue-list/issue-list.component';
-import { NewIssueComponent } from './pages/issues/new-issue/new-issue.component';
-
 import {CityListComponent} from "./pages/city/city-list/city-list.component";
 import {CityDetailComponent} from "./pages/city/city-detail/city-detail.component";
 import {CityNewComponent} from "./pages/city/city-new/city-new.component";
@@ -28,11 +24,15 @@ import {RestaurantListComponent} from "./pages/restaurant/restaurant-list/restau
 import {RestaurantDetailComponent} from "./pages/restaurant/restaurant-detail/restaurant-detail.component";
 import {RestaurantNewComponent} from "./pages/restaurant/restaurant-new/restaurant-new.component";
 
+import {ReviewListComponent} from "./pages/review/review-list/review-list.component";
+import {ReviewDetailComponent} from "./pages/review/review-detail/review-detail.component";
+import {ReviewNewComponent} from "./pages/review/review-new/review-new.component";
+
 import { StatsComponent } from './pages/stats/stats.component';
-import {IssueService} from "./services/issue.service";
 
 import {CityService} from "./services/city.service";
 import {RestaurantService} from "./services/restaurant.service";
+import {ReviewService} from "./services/review.service";
 
 @NgModule({
   declarations: [
@@ -40,9 +40,6 @@ import {RestaurantService} from "./services/restaurant.service";
     LoginComponent,
     RegisterComponent,
 
-    IssueDetailComponent,
-    IssueListComponent,
-    NewIssueComponent,
     StatsComponent,
 
     CityDetailComponent,
@@ -53,6 +50,9 @@ import {RestaurantService} from "./services/restaurant.service";
     RestaurantListComponent,
     RestaurantNewComponent,
 
+    ReviewDetailComponent,
+    ReviewListComponent,
+    ReviewNewComponent,
 
     MenuComponent,
     HelpComponent,
@@ -67,7 +67,7 @@ import {RestaurantService} from "./services/restaurant.service";
     BrowserAnimationsModule,
     MaterialItemsModule
   ],
-  providers: [AuthService, IssueService, CityService, RestaurantService, RouteGuard],
+  providers: [AuthService, CityService, RestaurantService, ReviewService, RouteGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule {
