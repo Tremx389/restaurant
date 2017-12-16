@@ -1,0 +1,14 @@
+<div class="page-body">
+  <h2 class="mat-h2">Edit Menu</h2>
+  <form [formGroup]="cityForm" novalidate>
+
+    <div class="form-control">
+      <mat-form-field class="example-full-width">
+        <input matInput [ngModel]="menu.name" placeholder="Name" formControlName="name">
+      </mat-form-field>
+    </div>
+
+    <button mat-raised-button class="mat-primary" (click)="submit() "[disabled]="!cityForm.valid">Update</button>
+    <a mat-button class="mat-accent" routerLink="/menus">Back</a>
+  </form>
+</div>
