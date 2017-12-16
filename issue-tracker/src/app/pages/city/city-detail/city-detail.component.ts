@@ -14,7 +14,7 @@ export class CityDetailComponent implements OnInit {
   id: number;
 
   cityForm: FormGroup = new FormGroup({
-    name: new FormControl('', [Validators.required])
+    name: new FormControl('', [])
   });
 
   constructor(private cityService: CityService,
@@ -39,7 +39,6 @@ export class CityDetailComponent implements OnInit {
   }
 
   submit() {
-    // todo: id
     this.cityService.update(this.city)
       .subscribe(
         res => {

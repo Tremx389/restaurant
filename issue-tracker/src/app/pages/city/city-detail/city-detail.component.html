@@ -4,10 +4,7 @@
 
     <div class="form-control">
       <mat-form-field class="example-full-width">
-        <input matInput placeholder="Name" formControlName="name" [value]="city.name">
-        <mat-error *ngIf="name.hasError('required')">
-          Name is <strong>required</strong>
-        </mat-error>
+        <input matInput [ngModel]="city.name" placeholder="Name" formControlName="name">
       </mat-form-field>
     </div>
 

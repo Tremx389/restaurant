@@ -25,15 +25,14 @@ export class CityNewComponent implements OnInit {
     return this.cityForm.get('name')
   }
 
-
   submit() {
     // todo: id
     this.cityService.create(new City(this.name.value))
       .subscribe(
-        res => res,
+        res => {
+          this.router.navigate(['/cities']);
+        },
         err => console.log(err)
       )
-
-      this.router.navigate(['/cities']);
   }
 }
