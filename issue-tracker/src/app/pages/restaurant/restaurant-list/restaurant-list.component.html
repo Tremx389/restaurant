@@ -15,7 +15,7 @@
 
     <ng-container matColumnDef="city">
       <mat-header-cell *matHeaderCellDef> City</mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.city.name + " (id: " + element.city.id + ")"}}</mat-cell>
+      <mat-cell *matCellDef="let element"> {{element.city.name + " [id: " + element.city.id + "]"}}</mat-cell>
     </ng-container>
 
     <ng-container matColumnDef="edit">

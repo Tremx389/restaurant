@@ -20,16 +20,11 @@
       </mat-form-field>
     </div>
 
-    <!-- todo: option box for cities -->
     <div class="form-control">
       <mat-form-field class="example-full-width">
-        <mat-select [(ngModel)]="cities" formControlName="city_id">
+        <mat-select [(ngModel)]="city_id" formControlName="city">
           <mat-option *ngFor="let c of cities" [value]="c.id">{{c.name}}</mat-option>
         </mat-select>
-
-        <mat-error *ngIf="city_id.hasError('required')">
-          City is <strong>required</strong>
-        </mat-error>
       </mat-form-field>
     </div>
 

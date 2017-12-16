@@ -22,6 +22,7 @@ export class Routes {
   static RESTAURANTS: String = 'restaurants';
   static REVIEWS: String = 'reviews';
   static CITIES: String = 'cities';
+  static MENUS: String = 'menus';
 }
 
 export class Server {

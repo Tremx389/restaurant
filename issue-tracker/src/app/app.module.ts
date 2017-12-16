@@ -28,11 +28,16 @@ import {ReviewListComponent} from "./pages/review/review-list/review-list.compon
 import {ReviewDetailComponent} from "./pages/review/review-detail/review-detail.component";
 import {ReviewNewComponent} from "./pages/review/review-new/review-new.component";
 
+import {MenuListComponent} from "./pages/menu/menu-list/menu-list.component";
+import {MenuDetailComponent} from "./pages/menu/menu-detail/menu-detail.component";
+import {MenuNewComponent} from "./pages/menu/menu-new/menu-new.component";
+
 import { StatsComponent } from './pages/stats/stats.component';
 
 import {CityService} from "./services/city.service";
 import {RestaurantService} from "./services/restaurant.service";
 import {ReviewService} from "./services/review.service";
+import {MenuService} from "./services/menu.service";
 
 @NgModule({
   declarations: [
@@ -54,6 +59,10 @@ import {ReviewService} from "./services/review.service";
     ReviewListComponent,
     ReviewNewComponent,
 
+    MenuDetailComponent,
+    MenuListComponent,
+    MenuNewComponent,
+
     MenuComponent,
     HelpComponent,
     ErrorComponent
@@ -67,7 +76,7 @@ import {ReviewService} from "./services/review.service";
     BrowserAnimationsModule,
     MaterialItemsModule
   ],
-  providers: [AuthService, RestaurantService, ReviewService, CityService, RouteGuard],
+  providers: [AuthService, RestaurantService, ReviewService, CityService, MenuService, RouteGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule {

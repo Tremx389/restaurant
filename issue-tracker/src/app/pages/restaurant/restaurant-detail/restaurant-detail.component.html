@@ -4,7 +4,7 @@
 
     <div class="form-control">
       <mat-form-field class="example-full-width">
-        <input matInput placeholder="Name" formControlName="name">
+        <input matInput placeholder="Name" formControlName="name" value="{{restaurant.name}}">
         <mat-error *ngIf="name.hasError('required')">
           Name is <strong>required</strong>
         </mat-error>
@@ -13,20 +13,18 @@
 
     <div class="form-control">
       <mat-form-field class="example-full-width">
-        <input matInput placeholder="Address" formControlName="address">
+        <input matInput placeholder="Address" formControlName="address" value="{{restaurant.address}}">
         <mat-error *ngIf="address.hasError('required')"> 
           Address is <strong>required</strong>
         </mat-error>
       </mat-form-field>
     </div>
 
-    <!-- todo: option box for cities -->
     <div class="form-control">
       <mat-form-field class="example-full-width">
-        <input matInput placeholder="City" formControlName="city_id">
-        <mat-error *ngIf="city_id.hasError('required')">
-          City is <strong>required</strong>
-        </mat-error>
+        <mat-select [(ngModel)]="city_id" formControlName="city">
+          <mat-option *ngFor="let c of cities" [value]="c.id">{{c.name}}</mat-option>
+        </mat-select>
       </mat-form-field>
     </div>
 

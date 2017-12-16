@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
       .subscribe(
         res => {
           // console.log("res:",res);
-          this.router.navigate(['/cities']);
+          this.router.navigate(['/restaurants']);
         },
 
         // res => console.log(res),

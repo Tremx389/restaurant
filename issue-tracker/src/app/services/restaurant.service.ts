@@ -18,6 +18,7 @@ export class RestaurantService {
   }
 
   create(restaurant: Restaurant): Observable<Restaurant> {
+    console.log(restaurant)
     return this.http.post(Server.routeTo(Routes.RESTAURANTS), restaurant)
       .map(res => res.json())
   }
@@ -28,7 +29,9 @@ export class RestaurantService {
 
   read(id: number) {
     return this.http.get(Server.routeTo(Routes.RESTAURANTS) + '/' + id)
-      .map(res => res.json())
+      .map(res =>  {       console.log(res);
+        console.log("--")
+        return res.json()})
   }
 
   update(restaurant: Restaurant) {

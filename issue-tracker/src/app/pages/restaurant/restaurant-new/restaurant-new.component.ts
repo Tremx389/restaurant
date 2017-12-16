@@ -8,6 +8,9 @@ import {CityService} from "../../../services/city.service";
 
 import {DataSource} from "@angular/cdk/collections";
 import {Observable} from "rxjs/Observable";
+
+import {Router} from '@angular/router';
+
 import "rxjs/add/observable/of";
 
 @Component({
@@ -19,13 +22,14 @@ import "rxjs/add/observable/of";
 
 export class RestaurantNewComponent implements OnInit {
   cities: City[];
+  city_id: number;
   restaurantForm: FormGroup = new FormGroup({
     name: new FormControl('', [Validators.required]),
     address: new FormControl('', [Validators.required]),
-    city_id: new FormControl('', [])
+    city: new FormControl('', [Validators.required])
   });
 
-  constructor(private restaurantService: RestaurantService, private cityService: CityService) {
+  constructor(private restaurantService: RestaurantService, private cityService: CityService, private router: Router) {
     this.cityService.getCities().subscribe(data => {
       this.cities = data;
     });
@@ -42,15 +46,12 @@ export class RestaurantNewComponent implements OnInit {
     return this.restaurantForm.get('name')
   }
 
-
-  get city_id() {
-    return this.restaurantForm.get('city_id')
-  }
-
   submit() {
-    this.restaurantService.create(new Restaurant(this.name.value, this.address.value, this.city_id.value))
+    this.restaurantService.create(new Restaurant(this.name.value, this.address.value, this.city_id))
       .subscribe(
-        res => res,
+        res => {
+          this.router.navigate(['/restaurants']);
+        },
         err => console.log(err)
       )
   }

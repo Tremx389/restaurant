@@ -12,6 +12,14 @@ export class AuthService {
     this.user = new User();
   }
 
+  getCurrent() {
+    if (this.isLoggedIn) {
+      return this.user;
+    } else {
+      console.log("User is not logged in.")
+    }
+  }
+
   login(user: User) {
     return this.http.post(Server.routeTo(Routes.LOGIN), user)
       .map(res => {

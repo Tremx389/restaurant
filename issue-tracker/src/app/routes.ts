@@ -14,6 +14,10 @@ import {ReviewListComponent} from "./pages/review/review-list/review-list.compon
 import {ReviewDetailComponent} from "./pages/review/review-detail/review-detail.component";
 import {ReviewNewComponent} from "./pages/review/review-new/review-new.component"
 
+import {MenuListComponent} from "./pages/menu/menu-list/menu-list.component";
+import {MenuDetailComponent} from "./pages/menu/menu-detail/menu-detail.component";
+import {MenuNewComponent} from "./pages/menu/menu-new/menu-new.component"
+
 import {HelpComponent} from "./pages/help/help.component";
 import {ErrorComponent} from "./pages/error/error.component";
 import {Role} from "./model/User";
@@ -36,6 +40,10 @@ export const appRoutes: Routes = [{
       {path: 'restaurants', component: RestaurantListComponent, data: {roles: loggedInUsers}},
       {path: 'restaurants/new', component: RestaurantNewComponent, data: {roles: [Role.USER, Role.ADMIN]}},
       {path: 'restaurants/:id', component: RestaurantDetailComponent, data: {roles: [Role.USER, Role.ADMIN]}},
+
+      {path: 'menus', component: MenuListComponent, data: {roles: loggedInUsers}},
+      {path: 'menus/new', component: MenuNewComponent, data: {roles: [Role.USER, Role.ADMIN]}},
+      {path: 'menus/:id', component: MenuDetailComponent, data: {roles: [Role.USER, Role.ADMIN]}},
 
       {path: 'reviews', component: ReviewListComponent, data: {roles: loggedInUsers}},
       {path: 'reviews/new', component: ReviewNewComponent, data: {roles: [Role.USER, Role.ADMIN]}},
