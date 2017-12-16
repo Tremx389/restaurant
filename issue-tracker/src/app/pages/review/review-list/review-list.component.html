@@ -3,15 +3,15 @@
   <a mat-raised-button routerLink="/reviews/new" class="mat-primary">Add new Review</a>
 
   <mat-table #table [dataSource]="reviews">
-    <ng-container matColumnDef="restaurant_id">
+    <ng-container matColumnDef="restaurant">
       <mat-header-cell *matHeaderCellDef> Restaurant</mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.restaurant_id}}</mat-cell>
+      <mat-cell *matCellDef="let element"> {{element.restaurant.name}}</mat-cell>
     </ng-container>
 
 
-    <ng-container matColumnDef="user_id">
+    <ng-container matColumnDef="user">
       <mat-header-cell *matHeaderCellDef> User</mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.user_id}}</mat-cell>
+      <mat-cell *matCellDef="let element"> {{element.user.username + " (" + element.user.role + ")"}}</mat-cell>
     </ng-container>
 
 

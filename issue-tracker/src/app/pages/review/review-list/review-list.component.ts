@@ -12,7 +12,7 @@ import {ReviewService} from "../../../services/review.service";
 })
 
 export class ReviewListComponent {
-  displayedColumns: String[] = ['restaurant_id', 'user_id', 'rating'];
+  displayedColumns: String[] = ['restaurant', 'user', 'rating'];
   reviews: DataSource<any> = new ReviewDataSource(this.reviewService);
 
   constructor(private reviewService: ReviewService) {
