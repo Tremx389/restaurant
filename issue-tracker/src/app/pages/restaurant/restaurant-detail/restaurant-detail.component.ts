@@ -1,4 +1,7 @@
+
+
 import {Component, OnInit} from '@angular/core';
+import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {Restaurant} from "../../../model/Restaurant";
 import {RestaurantService} from "../../../services/restaurant.service";
 import {ActivatedRoute, Router} from "@angular/router";
@@ -22,6 +25,12 @@ export class RestaurantDetailComponent implements OnInit {
     )
   }
 
+  restaurantForm: FormGroup = new FormGroup({
+    name: new FormControl('', [Validators.required]),
+    address: new FormControl('', [Validators.required]),
+    city_id: new FormControl('', [Validators.required])
+  });
+
   ngOnInit() {
     this.restaurantService.read(this.id)
       .subscribe(
@@ -30,20 +39,27 @@ export class RestaurantDetailComponent implements OnInit {
       )
   }
 
-  updateStatus() {
-    this.restaurantService.update(this.restaurant)
-      .subscribe(
-        restaurant => console.log('ok'),
-        err => console.log(err)
-      )
+  get address() {
+    return this.restaurantForm.get('address')
+  }
+
+  get name() {
+    return this.restaurantForm.get('name')
+  }
+
+
+  get city_id() {
+    return this.restaurantForm.get('city_id')
   }
 
   submit() {
-    this.restaurantService.sendMessage(this.restaurant.id, this.message)
+    console.log("---");
+    console.log(this.restaurant);
+
+    this.restaurantService.update(this.restaurant)
       .subscribe(
-        restaurant => console.log('ok'),
+        res => res,
         err => console.log(err)
       )
   }
-
 }

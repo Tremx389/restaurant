@@ -19,7 +19,7 @@ public class RestaurantApiController {
     @Autowired
     private RestaurantService restaurantService;
     
-    @Role({USER, MAJOR, BOSS})
+    //@Role({USER, MAJOR, BOSS})
     @GetMapping
     private ResponseEntity<Iterable<Restaurant>> list() {
         Iterable<Restaurant> restaurants = restaurantService.restaurants();
@@ -27,7 +27,7 @@ public class RestaurantApiController {
     }
     
     
-    @Role(BOSS)
+    //@Role(BOSS)
     @PostMapping
     private ResponseEntity<Restaurant> create(@RequestBody RestaurantDto restaurantDto) {
         Restaurant saved = restaurantService.create(restaurantDto);
@@ -35,21 +35,21 @@ public class RestaurantApiController {
     }
     
     
-    @Role({USER, MAJOR, BOSS})
+    //@Role({USER, MAJOR, BOSS})
     @GetMapping("/{id}")
     private ResponseEntity<Restaurant> read(@PathVariable String id) {
         Restaurant read = restaurantService.read(Integer.parseInt(id));
         return ResponseEntity.ok(read);
     }
     
-    @Role(MAJOR)
+    //@Role(MAJOR)
     @DeleteMapping("/{id}")
     private ResponseEntity delete(@PathVariable int id) {
         restaurantService.delete(id);
         return ResponseEntity.ok().build();
     }
     
-    @Role(MAJOR)
+    //@Role(MAJOR)
     @PutMapping("/{id}")
     private ResponseEntity<Restaurant> update(@PathVariable int id, @RequestBody RestaurantDto restaurantDto) {
         Restaurant updated = restaurantService.update(id, restaurantDto);

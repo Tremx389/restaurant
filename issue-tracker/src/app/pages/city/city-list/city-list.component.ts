@@ -12,8 +12,8 @@ import {CityService} from "../../../services/city.service";
 })
 
 export class CityListComponent {
-  displayedColumns: String[] = ['name'];
-  citys: DataSource<any> = new CityDataSource(this.cityService);
+  displayedColumns: String[] = ['name', 'edit'];
+  cities: DataSource<any> = new CityDataSource(this.cityService);
 
   constructor(private cityService: CityService) {
   }
@@ -26,11 +26,6 @@ export class CityListComponent {
       );
   }
 }
-
-// const data: City[] = [
-//   new City(1, 'Muxik vazze', 'Vár', 1),
-//   new City(1, 'ÉS MÉG MINDIG!!', 'Lágymányosi híd', 2),
-// ];
 
 export class CityDataSource extends DataSource<any> {
   constructor(private cityService: CityService) {

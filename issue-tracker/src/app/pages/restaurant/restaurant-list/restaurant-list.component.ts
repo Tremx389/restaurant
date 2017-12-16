@@ -12,7 +12,7 @@ import {RestaurantService} from "../../../services/restaurant.service";
 })
 
 export class RestaurantListComponent {
-  displayedColumns: String[] = ['name', 'address', 'city_id'];
+  displayedColumns: String[] = ['name', 'address', 'city_id', 'edit'];
   restaurants: DataSource<any> = new RestaurantDataSource(this.restaurantService);
 
   constructor(private restaurantService: RestaurantService) {
@@ -26,11 +26,6 @@ export class RestaurantListComponent {
       );
   }
 }
-
-// const data: Restaurant[] = [
-//   new Restaurant(1, 'Muxik vazze', 'Vár', 1),
-//   new Restaurant(1, 'ÉS MÉG MINDIG!!', 'Lágymányosi híd', 2),
-// ];
 
 export class RestaurantDataSource extends DataSource<any> {
   constructor(private restaurantService: RestaurantService) {

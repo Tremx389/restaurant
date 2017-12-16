@@ -15,7 +15,6 @@ export class ReviewNewComponent implements OnInit {
   });
 
   constructor(private reviewService: ReviewService) {
-
   }
 
   ngOnInit() {

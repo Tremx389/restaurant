@@ -38,12 +38,12 @@ export class ReviewDetailComponent implements OnInit {
       )
   }
 
-  submit() {
-    this.reviewService.sendMessage(this.review.id, this.message)
-      .subscribe(
-        review => console.log('ok'),
-        err => console.log(err)
-      )
-  }
+  // submit() {
+  //   this.reviewService.sendMessage(this.review.id, this.message)
+  //     .subscribe(
+  //       review => console.log('ok'),
+  //       err => console.log(err)
+  //     )
+  // }
 
 }

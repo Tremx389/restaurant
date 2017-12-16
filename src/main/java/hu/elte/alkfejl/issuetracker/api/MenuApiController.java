@@ -30,7 +30,7 @@ public class MenuApiController {
     @Autowired
     private MenuService menuService;
    
-    @Role({USER, MAJOR, BOSS})
+   // @Role({USER, MAJOR, BOSS})
     @GetMapping
     private ResponseEntity<Iterable<Menu>> list() {
         Iterable<Menu> menus = menuService.menus();
@@ -38,7 +38,7 @@ public class MenuApiController {
     }
    
    
-    @Role(BOSS)
+    //@Role(BOSS)
     @PostMapping
     private ResponseEntity<Menu> create(@RequestBody Menu menu) {
         Menu saved = menuService.create(menu);
@@ -46,21 +46,21 @@ public class MenuApiController {
     }
    
    
-    @Role({USER, MAJOR, BOSS})
+  //  @Role({USER, MAJOR, BOSS})
     @GetMapping("/{id}")
     private ResponseEntity<Menu> read(@PathVariable String id) {
         Menu read = menuService.read(Integer.parseInt(id));
         return ResponseEntity.ok(read);
     }
    
-    @Role(BOSS)
+  //  @Role(BOSS)
     @DeleteMapping("/{id}")
     private ResponseEntity delete(@PathVariable int id) {
         menuService.delete(id);
         return ResponseEntity.ok().build();
     }
    
-    @Role(BOSS)
+  //  @Role(BOSS)
     @PutMapping("/{id}")
     private ResponseEntity<Menu> update(@PathVariable int id, @RequestBody Menu menu) {
         Menu updated = menuService.update(id, menu);

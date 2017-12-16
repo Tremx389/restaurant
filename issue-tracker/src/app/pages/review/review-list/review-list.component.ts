@@ -12,7 +12,7 @@ import {ReviewService} from "../../../services/review.service";
 })
 
 export class ReviewListComponent {
-  displayedColumns: String[] = ['restaurant_id', 'user_id'];
+  displayedColumns: String[] = ['restaurant_id', 'user_id', 'rating'];
   reviews: DataSource<any> = new ReviewDataSource(this.reviewService);
 
   constructor(private reviewService: ReviewService) {
@@ -26,12 +26,6 @@ export class ReviewListComponent {
       );
   }
 }
-
-// const data: Review[] = [
-//   new Review(1, 'Muxik vazze', 'Vár', 1),
-//   new Review(1, 'ÉS MÉG MINDIG!!', 'Lágymányosi híd', 2),
-// ];
-
 export class ReviewDataSource extends DataSource<any> {
   constructor(private reviewService: ReviewService) {
     super();

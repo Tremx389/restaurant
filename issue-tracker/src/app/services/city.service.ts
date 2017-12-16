@@ -13,11 +13,13 @@ export class CityService {
 
   getCities(): Observable<City[]> {
     console.log(Server.routeTo(Routes.CITIES))
+    console.log("---")
     return this.http.get(Server.routeTo(Routes.CITIES))
       .map(res => res.json())
   }
 
   create(city: City): Observable<City> {
+    console.log(city);
     return this.http.post(Server.routeTo(Routes.CITIES), city)
       .map(res => res.json())
   }

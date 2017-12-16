@@ -27,7 +27,7 @@ export class CityNewComponent implements OnInit {
 
   submit() {
     // todo: id
-    this.cityService.create(new City(1, this.name.value))
+    this.cityService.create(new City(this.name.value))
       .subscribe(
         res => res,
         err => console.log(err)

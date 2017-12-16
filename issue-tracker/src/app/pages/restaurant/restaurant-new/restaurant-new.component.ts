@@ -1,22 +1,34 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {Restaurant} from "../../../model/Restaurant";
+import {City} from "../../../model/City";
+
 import {RestaurantService} from "../../../services/restaurant.service";
+import {CityService} from "../../../services/city.service";
+
+import {DataSource} from "@angular/cdk/collections";
+import {Observable} from "rxjs/Observable";
+import "rxjs/add/observable/of";
 
 @Component({
   selector: 'app-restaurant-new',
   templateUrl: './restaurant-new.component.html',
   styleUrls: ['./restaurant-new.component.css']
 })
+
+
 export class RestaurantNewComponent implements OnInit {
+  cities: City[];
   restaurantForm: FormGroup = new FormGroup({
     name: new FormControl('', [Validators.required]),
     address: new FormControl('', [Validators.required]),
-    city_id: new FormControl('', [Validators.required])
+    city_id: new FormControl('', [])
   });
 
-  constructor(private restaurantService: RestaurantService) {
-
+  constructor(private restaurantService: RestaurantService, private cityService: CityService) {
+    this.cityService.getCities().subscribe(data => {
+      this.cities = data;
+    });
   }
 
   ngOnInit() {
@@ -36,8 +48,7 @@ export class RestaurantNewComponent implements OnInit {
   }
 
   submit() {
-    // todo: id
-    this.restaurantService.create(new Restaurant(1, this.name.value, this.address.value, this.city_id.value))
+    this.restaurantService.create(new Restaurant(this.name.value, this.address.value, this.city_id.value))
       .subscribe(
         res => res,
         err => console.log(err)

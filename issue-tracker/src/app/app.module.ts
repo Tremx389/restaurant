@@ -67,7 +67,7 @@ import {ReviewService} from "./services/review.service";
     BrowserAnimationsModule,
     MaterialItemsModule
   ],
-  providers: [AuthService, CityService, RestaurantService, ReviewService, RouteGuard],
+  providers: [AuthService, RestaurantService, ReviewService, CityService, RouteGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule {

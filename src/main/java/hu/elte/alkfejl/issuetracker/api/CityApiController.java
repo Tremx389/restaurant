@@ -20,7 +20,7 @@ public class CityApiController {
     @Autowired
     private CityService cityService;
     
-    @Role({USER, MAJOR, BOSS})
+    //@Role({USER, MAJOR, BOSS})
     @GetMapping
     private ResponseEntity<Iterable<City>> list() {
         Iterable<City> cities = cityService.cities();
@@ -28,7 +28,7 @@ public class CityApiController {
     }
     
     
-    @Role(MAJOR)
+    //@Role(MAJOR)
     @PostMapping
     private ResponseEntity<City> create(@RequestBody City city) {
         City saved = cityService.create(city);
@@ -36,21 +36,21 @@ public class CityApiController {
     }
     
     
-    @Role({USER, MAJOR, BOSS})
+    //@Role({USER, MAJOR, BOSS})
     @GetMapping("/{id}")
     private ResponseEntity<City> read(@PathVariable String id) {
         City read = cityService.read(Integer.parseInt(id));
         return ResponseEntity.ok(read);
     }
     
-    @Role(MAJOR)
+    //@Role(MAJOR)
     @DeleteMapping("/{id}")
     private ResponseEntity delete(@PathVariable int id) {
         cityService.delete(id);
         return ResponseEntity.ok().build();
     }
     
-    @Role(MAJOR)
+    //@Role(MAJOR)
     @PutMapping("/{id}")
     private ResponseEntity<City> update(@PathVariable int id, @RequestBody City city) {
         City updated = cityService.update(id, city);

@@ -10,9 +10,6 @@ import org.springframework.web.bind.annotation.*;
 
 import static hu.elte.alkfejl.issuetracker.model.User.Role.USER;
 
-/**
- * @author Godzsák Dávid <godzsakdavid@gmail.com>
- */
 @RestController
 @RequestMapping("/api/user")
 public class UserApiController {
