@@ -48,11 +48,11 @@ public class ReviewService {
         reviewRepository.delete(id);
     }
     
-    public Review update(int id, Review city, User user) {
+    public Review update(int id, Review review, User user) {
         Review currentReview = reviewRepository.findOne(id);
         if (user.getId() == currentReview.getUser().getId()) {
-            currentReview.setRating(city.getRating());
-            currentReview.setRestaurant(city.getRestaurant());
+            currentReview.setRating(review.getRating());
+            currentReview.setRestaurant(review.getRestaurant());
             return reviewRepository.save(currentReview);
         } else {
             return currentReview;

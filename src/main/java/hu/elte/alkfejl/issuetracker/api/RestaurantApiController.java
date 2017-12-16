@@ -4,6 +4,7 @@ import hu.elte.alkfejl.issuetracker.model.Restaurant;
 import static hu.elte.alkfejl.issuetracker.model.User.Role.BOSS;
 import static hu.elte.alkfejl.issuetracker.model.User.Role.MAJOR;
 import static hu.elte.alkfejl.issuetracker.model.User.Role.USER;
+import hu.elte.alkfejl.issuetracker.service.RestaurantDto;
 import hu.elte.alkfejl.issuetracker.service.RestaurantService;
 import hu.elte.alkfejl.issuetracker.service.annotations.Role;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,8 +29,8 @@ public class RestaurantApiController {
     
     @Role(BOSS)
     @PostMapping
-    private ResponseEntity<Restaurant> create(@RequestBody Restaurant restaurant) {
-        Restaurant saved = restaurantService.create(restaurant);
+    private ResponseEntity<Restaurant> create(@RequestBody RestaurantDto restaurantDto) {
+        Restaurant saved = restaurantService.create(restaurantDto);
         return ResponseEntity.ok(saved);
     }
     
@@ -50,8 +51,8 @@ public class RestaurantApiController {
     
     @Role(MAJOR)
     @PutMapping("/{id}")
-    private ResponseEntity<Restaurant> update(@PathVariable int id, @RequestBody Restaurant restaurant) {
-        Restaurant updated = restaurantService.update(id, restaurant);
+    private ResponseEntity<Restaurant> update(@PathVariable int id, @RequestBody RestaurantDto restaurantDto) {
+        Restaurant updated = restaurantService.update(id, restaurantDto);
         return ResponseEntity.ok(updated);
     }
 }
