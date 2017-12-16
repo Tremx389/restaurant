@@ -1,5 +1,3 @@
-
-
 import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {Restaurant} from "../../../model/Restaurant";
@@ -13,7 +11,6 @@ import {ActivatedRoute, Router} from "@angular/router";
 })
 export class RestaurantDetailComponent implements OnInit {
   restaurant: Restaurant = new Restaurant();
-  message: String = '';
   id: number;
 
   constructor(private restaurantService: RestaurantService,

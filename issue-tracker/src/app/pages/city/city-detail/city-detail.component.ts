@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {City} from "../../../model/City";
 import {CityService} from "../../../services/city.service";
 import {ActivatedRoute, Router} from "@angular/router";
@@ -10,8 +11,11 @@ import {ActivatedRoute, Router} from "@angular/router";
 })
 export class CityDetailComponent implements OnInit {
   city: City = new City();
-  message: String = '';
   id: number;
+
+  cityForm: FormGroup = new FormGroup({
+    name: new FormControl('', [Validators.required])
+  });
 
   constructor(private cityService: CityService,
               private route: ActivatedRoute,
@@ -30,20 +34,18 @@ export class CityDetailComponent implements OnInit {
       )
   }
 
-  updateStatus() {
+  get name() {
+    return this.cityForm.get('name')
+  }
+
+  submit() {
+    // todo: id
     this.cityService.update(this.city)
       .subscribe(
-        city => console.log('ok'),
+        res => {
+          this.router.navigate(['/cities']);
+        },
         err => console.log(err)
       )
   }
-
-  // submit() {
-  //   this.cityService.sendMessage(this.city.id, this.message)
-  //     .subscribe(
-  //       city => console.log('ok'),
-  //       err => console.log(err)
-  //     )
-  // }
-
 }

@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {City} from "../../../model/City";
 import {CityService} from "../../../services/city.service";
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-city-new',
@@ -13,7 +14,7 @@ export class CityNewComponent implements OnInit {
     name: new FormControl('', [Validators.required])
   });
 
-  constructor(private cityService: CityService) {
+  constructor(private cityService: CityService, private router: Router) {
 
   }
 
@@ -32,5 +33,7 @@ export class CityNewComponent implements OnInit {
         res => res,
         err => console.log(err)
       )
+
+      this.router.navigate(['/cities']);
   }
 }
