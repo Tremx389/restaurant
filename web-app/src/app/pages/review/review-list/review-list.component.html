@@ -11,7 +11,7 @@
 
     <ng-container matColumnDef="user">
       <mat-header-cell *matHeaderCellDef> User</mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.user.username + " (" + element.user.role + ")"}}</mat-cell>
+      <mat-cell *matCellDef="let element"> {{(element.user ? element.user.username : '') + " (" + (element.user ? element.user.role : '') + ")"}}</mat-cell>
     </ng-container>
 
 

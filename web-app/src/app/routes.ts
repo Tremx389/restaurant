@@ -34,19 +34,19 @@ export const appRoutes: Routes = [{
       {path: 'register', component: RegisterComponent, data: {roles: [Role.GUEST]}},
 
       {path: 'cities', component: CityListComponent, data: {roles: loggedInUsers}},
-      {path: 'cities/new', component: CityNewComponent, data: {roles: [Role.USER, Role.ADMIN]}},
-      {path: 'cities/:id', component: CityDetailComponent, data: {roles: [Role.USER, Role.ADMIN]}},
+      {path: 'cities/new', component: CityNewComponent, data: {roles: [Role.MAJOR, Role.ADMIN]}},
+      {path: 'cities/:id', component: CityDetailComponent, data: {roles: [Role.MAJOR, Role.ADMIN]}},
 
       {path: 'restaurants', component: RestaurantListComponent, data: {roles: loggedInUsers}},
-      {path: 'restaurants/new', component: RestaurantNewComponent, data: {roles: [Role.USER, Role.ADMIN]}},
-      {path: 'restaurants/:id', component: RestaurantDetailComponent, data: {roles: [Role.USER, Role.ADMIN]}},
+      {path: 'restaurants/new', component: RestaurantNewComponent, data: {roles: [Role.MAJOR, Role.BOSS, Role.ADMIN]}},
+      {path: 'restaurants/:id', component: RestaurantDetailComponent, data: {roles: [Role.MAJOR, Role.BOSS, Role.ADMIN]}},
 
       {path: 'menus', component: MenuListComponent, data: {roles: loggedInUsers}},
-      {path: 'menus/new', component: MenuNewComponent, data: {roles: [Role.USER, Role.ADMIN]}},
-      {path: 'menus/:id', component: MenuDetailComponent, data: {roles: [Role.USER, Role.ADMIN]}},
+      {path: 'menus/new', component: MenuNewComponent, data: {roles: [Role.BOSS, Role.ADMIN]}},
+      {path: 'menus/:id', component: MenuDetailComponent, data: {roles: [Role.BOSS, Role.ADMIN]}},
 
       {path: 'reviews', component: ReviewListComponent, data: {roles: loggedInUsers}},
-      {path: 'reviews/new', component: ReviewNewComponent, data: {roles: [Role.USER, Role.ADMIN]}},
+      {path: 'reviews/new', component: ReviewNewComponent, data: {roles: loggedInUsers}},
 
       {path: 'help', component: HelpComponent},
       {path: '**', component: ErrorComponent}

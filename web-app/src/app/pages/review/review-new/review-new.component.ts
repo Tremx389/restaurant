@@ -35,7 +35,7 @@ export class ReviewNewComponent implements OnInit {
   }
 
   submit() {
-    this.reviewService.create(new Review(0, this.rating, this.restaurant.id, this.authService.getCurrent().id))
+    this.reviewService.create(new Review(this.authService.getCurrent().id, this.rating, this.restaurant.id))
       .subscribe(
         res => {
           this.router.navigate(['/reviews']);

@@ -7,12 +7,12 @@ export class Menu {
   id: number;
   type: number;
   name: String;
-  restaurant_id: number;
+  restaurantId: number;
   
-  constructor(name?: String, type?: number, restaurant_id?: number, id?: number) {
+  constructor(name?: String, type?: number, restaurantId?: number, id?: number) {
     this.id = id;
     this.name = name;
     this.type = type;
-    this.restaurant_id = restaurant_id;
+    this.restaurantId = restaurantId;
   }
 }

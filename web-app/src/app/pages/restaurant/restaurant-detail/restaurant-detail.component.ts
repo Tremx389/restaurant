@@ -33,9 +33,9 @@ export class RestaurantDetailComponent implements OnInit {
   }
 
   restaurantForm: FormGroup = new FormGroup({
-    name: new FormControl('', [Validators.required]),
-    address: new FormControl('', [Validators.required]),
-    city: new FormControl('', [Validators.required])
+    name: new FormControl('', []),
+    address: new FormControl('', []),
+    city: new FormControl('', [])
   });
 
   ngOnInit() {

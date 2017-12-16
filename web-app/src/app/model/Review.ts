@@ -1,15 +1,15 @@
 export class Review {
   id: number;  
 
-  user_id: number;
-  restaurant_id: number;
+  userId: number;
+  restaurantId: number;
   rating: number;
 
-  constructor(user_id?: number, rating?: number, restaurant_id?: number, id?: number) {
+  constructor(userId?: number, rating?: number, restaurantId?: number, id?: number) {
     this.id = id;
     this.rating = rating;
 
-    this.user_id = user_id;
-    this.restaurant_id = restaurant_id;
+    this.userId = userId;
+    this.restaurantId = restaurantId;
   }
 }
