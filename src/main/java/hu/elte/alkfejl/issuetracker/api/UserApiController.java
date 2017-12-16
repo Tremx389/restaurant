@@ -24,7 +24,6 @@ public class UserApiController {
         this.userService = userService;
     }
 
-    @Role(USER)
     @GetMapping
     public ResponseEntity<User> user() {
         if (userService.isLoggedIn()) {
@@ -43,7 +42,7 @@ public class UserApiController {
     }
 
     @PostMapping("/logout")
-    public ResponseEntity logout(@RequestBody User user) {
+    public ResponseEntity logout() {
         this.userService.setUser(null);
         return ResponseEntity.ok().build();
     }
