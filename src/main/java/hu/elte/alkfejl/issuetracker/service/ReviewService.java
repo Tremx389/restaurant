@@ -1,5 +1,6 @@
 package hu.elte.alkfejl.issuetracker.service;
 
+import hu.elte.alkfejl.issuetracker.model.Restaurant;
 import hu.elte.alkfejl.issuetracker.model.Review;
 import hu.elte.alkfejl.issuetracker.model.User;
 import hu.elte.alkfejl.issuetracker.repository.ReviewRepository;
@@ -12,12 +13,31 @@ public class ReviewService {
     @Autowired
     private ReviewRepository reviewRepository;
     
+    @Autowired
+    private RestaurantService restaurantService;
+    
+    @Autowired
+    private UserService userService;
+    
     public Iterable<Review> reviews() {
         return reviewRepository.findAll();
     }
     
-    public Review create(Review review) {
-        return reviewRepository.save(review);
+    public Review create(ReviewDto reviewDto) {
+        
+        Review rev = new Review();
+        rev.setRating(reviewDto.getRating());
+        Restaurant restaurant = restaurantService.read(reviewDto.getRestaurantId());
+        User user = userService.getUser();
+        
+        if(null != restaurant){
+            rev.setRestaurant(restaurant);
+        }
+        if(null != user){
+            rev.setUser(user);
+        }
+        
+        return reviewRepository.save(rev);
     }
     
     public Review read(int id) {

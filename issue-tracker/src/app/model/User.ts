@@ -1,17 +1,18 @@
-export enum Role {
-  GUEST, USER, ADMIN
+export class Role {
+  static GUEST: String = "GUEST";
+  static USER: String = "USER";
+  static ADMIN: String = "ADMIN";
+  static MAJOR: String = "MAJOR";
+  static BOSS: String = "BOSS";
 }
 
 export class User {
-  id: number;  
-
   username: String;
   password: String;
   email: String;
-  role: Role;
+  role: String;
 
-  constructor(id?: number, username?: String, password?: String, email?: String, role?: Role) {
-    this.id = id;
+  constructor(username?: String, password?: String, email?: String, role?: String) {
     this.username = username || "";
     this.password = password || "";
     this.email = email || "";

@@ -6,12 +6,14 @@ import static hu.elte.alkfejl.issuetracker.model.User.Role.MAJOR;
 import static hu.elte.alkfejl.issuetracker.model.User.Role.USER;
 import hu.elte.alkfejl.issuetracker.service.CityService;
 import hu.elte.alkfejl.issuetracker.service.annotations.Role;
+import javax.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/cities")
+//@CrossOrigin(origins = "http://localhost:8080")
 public class CityApiController {
     
     

@@ -1,62 +1,51 @@
-import {BrowserModule} from "@angular/platform-browser";
-import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import {NgModule} from "@angular/core";
-import {RouterModule} from "@angular/router"
+import {BrowserModule} from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {NgModule} from '@angular/core';
+import {RouterModule} from '@angular/router'
 
-import {AppComponent} from "./app.component";
-import {LoginComponent} from "./pages/login/login.component";
+import {AppComponent} from './app.component';
+import {LoginComponent} from './pages/login/login.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {AuthService} from "./services/auth.service";
 import {HttpModule} from "@angular/http";
-import { RegisterComponent } from "./pages/register/register.component";
-import  {appRoutes} from "./routes";
+import { RegisterComponent } from './pages/register/register.component';
+import  {appRoutes} from './routes';
 import {MaterialItemsModule} from "./MaterialItemsModule";
-import { MenuComponent } from "./components/menu/menu.component";
+import { MenuComponent } from './components/menu/menu.component';
+import { HelpComponent } from './pages/help/help.component';
+import { ErrorComponent } from './pages/error/error.component';
+import {RouteGuard} from "./route.guard";
 
-import { RestaurantDetailComponent } from "./pages/restaurant/restaurant-detail/restaurant-detail.component";
-import { RestaurantListComponent } from "./pages/restaurant/restaurant-list/restaurant-list.component";
-import { RestaurantNewComponent } from "./pages/restaurant/restaurant-new/restaurant-new.component";
-import { RestaurantService } from "./services/restaurant.service";
+import { IssueDetailComponent } from './pages/issues/issue-detail/issue-detail.component';
+import { IssueListComponent } from './pages/issues/issue-list/issue-list.component';
+import { NewIssueComponent } from './pages/issues/new-issue/new-issue.component';
 
-import { CityDetailComponent } from "./pages/city/city-detail/city-detail.component";
-import { CityListComponent } from "./pages/city/city-list/city-list.component";
-import { CityNewComponent } from "./pages/city/city-new/city-new.component";
-import { CityService } from "./services/city.service";
+import {CityListComponent} from "./pages/cities/city-list/city-list.component";
+import {CityDetailComponent} from "./pages/cities/city-detail/city-detail.component";
+// import {NewCityComponent} from "./pages/cities/new-city/new-city.component";
 
-import { ReviewDetailComponent } from "./pages/review/review-detail/review-detail.component";
-import { ReviewListComponent } from "./pages/review/review-list/review-list.component";
-import { ReviewNewComponent } from "./pages/review/review-new/review-new.component";
-import { ReviewService } from "./services/review.service";
+import { StatsComponent } from './pages/stats/stats.component';
+import {IssueService} from "./services/issue.service";
 
-import { UserListComponent } from "./pages/user/user-list/user-list.component";
-import { UserService } from "./services/user.service";
-
-// import { UserComponent } from "./pages/user/user.component";
-
-import { ErrorComponent } from "./pages/error/error.component";
+import {CityService} from "./services/city.service";
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    ErrorComponent,
-    MenuComponent,
-    
-    RestaurantListComponent,
-    RestaurantDetailComponent,
-    RestaurantNewComponent,
 
-    CityListComponent,
+    IssueDetailComponent,
+    IssueListComponent,
+    NewIssueComponent,
+    StatsComponent,
+
     CityDetailComponent,
-    CityNewComponent,
-
-    ReviewListComponent,
-    ReviewDetailComponent,
-    ReviewNewComponent,
-
-    UserListComponent,
- ],
+    CityListComponent,
+    MenuComponent,
+    HelpComponent,
+    ErrorComponent
+  ],
   imports: [
     BrowserModule,
     FormsModule,
@@ -66,7 +55,7 @@ import { ErrorComponent } from "./pages/error/error.component";
     BrowserAnimationsModule,
     MaterialItemsModule
   ],
-  providers: [AuthService, RestaurantService, CityService, ReviewService, UserService],
+  providers: [AuthService, IssueService, CityService, RouteGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule {

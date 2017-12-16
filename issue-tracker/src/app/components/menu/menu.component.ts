@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Role} from "../../model/User";
 import {AuthService} from "../../services/auth.service";
+import {NavigationEnd, Router} from "@angular/router";
 
 interface MenuItem {
   link: String;
@@ -10,33 +11,49 @@ interface MenuItem {
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.css']
+  styleUrls: ['./menu.component.css'],
 })
 export class MenuComponent implements OnInit {
   private common: MenuItem[] = [
-
-    {link: '/restaurant', title: 'Restaurants'},
-    {link: '/review', title: 'Reviews'},
-    {link: '/city', title: 'Cities'},
-    {link: '/user', title: 'Users'},
+    {link: '/cities', title: 'Cities'},
+    {link: '/restaurants', title: 'Resturants'},
+    {link: '/reviews', title: 'Reviews'},
+    {link: '/users', title: 'Users'},
   ];
 
-  private roleMenus = new Map<Role, MenuItem[]>([
-    [Role.GUEST, [...this.common]],
-    [Role.USER, [...this.common, {link: '/restaurant', title: 'Restaurants'}]],
-    // [Role.ADMIN, [{link: '/stats', title: 'Statistics'}, {link: '/issues', title: 'Issues'}]]
+  private roleMenus = new Map<String, MenuItem[]>([
+    [Role.GUEST, []],
+    [Role.USER, [...this.common]],
+    [Role.BOSS, [...this.common]],
+    [Role.MAJOR, [...this.common]],
+    [Role.ADMIN, [...this.common]]
   ]);
 
   menus: MenuItem[];
 
-  constructor(private authService: AuthService) {
+  constructor(private authService: AuthService, private router: Router) {
   }
 
   ngOnInit() {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        this.setMenus()
+      }
+    })
+  }
+
+  setMenus() {
     if (this.authService.isLoggedIn) {
       this.menus = this.roleMenus.get(this.authService.user.role);
     } else {
       this.menus = this.roleMenus.get(Role.GUEST)
     }
+  }
+
+  logout() {
+    this.authService.logout().subscribe(
+      res => this.router.navigate(['/login']),
+      err => err
+    );
   }
 }

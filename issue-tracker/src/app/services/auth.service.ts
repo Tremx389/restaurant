@@ -16,7 +16,9 @@ export class AuthService {
     return this.http.post(Server.routeTo(Routes.LOGIN), user)
       .map(res => {
         this.isLoggedIn = true;
-        this.user = res.json();
+        const data = res.json();
+        this.user = new User(data.username, data.password, data.email, data.role);
+        console.log(this.user)
         return this.user;
       })
   }
@@ -33,7 +35,7 @@ export class AuthService {
   logout() {
     return this.http.get(Server.routeTo(Routes.LOGOUT))
       .map(res => {
-        this.user = null;
+        this.user = new User();
         this.isLoggedIn = false;
       })
   }

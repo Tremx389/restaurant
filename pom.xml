@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>hu.elte.alkfejl</groupId>
-	<artifactId>restaurant</artifactId>
+	<artifactId>issue-tracker</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>restaurant</name>
+	<name>issue-tracker</name>
 	<description>Demo project for Spring Boot</description>
 
 	<parent>

@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {User} from "../../model/User";
 import {AbstractControl, FormControl, FormGroup, Validators} from '@angular/forms';
 import {AuthService} from "../../services/auth.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-login',
@@ -14,16 +15,21 @@ export class LoginComponent implements OnInit {
     password: new FormControl('', [Validators.required])
   });
 
-  constructor(private loginService: AuthService) {
+  constructor(private authService: AuthService, private router: Router) {
   }
 
   ngOnInit() {
   }
 
   submit() {
-    this.loginService.login(new User(this.username.value, this.password.value))
+    this.authService.login(new User(this.username.value, this.password.value))
       .subscribe(
-        res => console.log(res),
+        res => {
+          // console.log("res:",res);
+          this.router.navigate(['/cities']);
+        },
+
+        // res => console.log(res),
         err => console.log(err))
   }
 

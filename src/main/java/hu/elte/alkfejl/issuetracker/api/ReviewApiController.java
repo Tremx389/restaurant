@@ -1,5 +1,6 @@
 package hu.elte.alkfejl.issuetracker.api;
 
+import hu.elte.alkfejl.issuetracker.service.ReviewDto;
 import hu.elte.alkfejl.issuetracker.model.Review;
 import static hu.elte.alkfejl.issuetracker.model.User.Role.BOSS;
 import static hu.elte.alkfejl.issuetracker.model.User.Role.MAJOR;
@@ -32,8 +33,8 @@ public class ReviewApiController {
     
     @Role({USER, MAJOR, BOSS})
     @PostMapping
-    private ResponseEntity<Review> create(@RequestBody Review review) {
-        Review saved = reviewService.create(review);
+    private ResponseEntity<Review> create(@RequestBody ReviewDto reviewDto) {
+        Review saved = reviewService.create(reviewDto);
         return ResponseEntity.ok(saved);
     }
     

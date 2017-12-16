@@ -42,7 +42,7 @@ public class UserApiController {
         }
     }
 
-    @GetMapping("/logout")
+    @PostMapping("/logout")
     public ResponseEntity logout(@RequestBody User user) {
         this.userService.setUser(null);
         return ResponseEntity.ok().build();

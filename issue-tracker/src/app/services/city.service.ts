@@ -12,6 +12,7 @@ export class CityService {
   }
 
   getCities(): Observable<City[]> {
+    console.log(Server.routeTo(Routes.CITIES))
     return this.http.get(Server.routeTo(Routes.CITIES))
       .map(res => res.json())
   }
