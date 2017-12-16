@@ -1,21 +1,19 @@
 <div class="page-body">
   <h2 class="mat-h2">New Review</h2>
   <form [formGroup]="reviewForm" novalidate>
+    <div class="form-control">
+      <mat-form-field class="example-full-width">
+        <mat-select [(ngModel)]="restaurant" formControlName="restaurant_id">
+          <mat-option *ngFor="let c of restaurants" [value]="c">{{c.name}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
 
     <div class="form-control">
       <mat-form-field class="example-full-width">
-        <input matInput placeholder="User" formControlName="user_id">
-        <mat-error *ngIf="user_id.hasError('required')">
-          User id is <strong>required</strong>
-        </mat-error>
-      </mat-form-field>
-    </div>
-    <div class="form-control">
-      <mat-form-field class="example-full-width">
-        <input matInput placeholder="Retaurant" formControlName="restaurant_id">
-        <mat-error *ngIf="restaurant_id.hasError('required')">
-          Restaurant id is <strong>required</strong>
-        </mat-error>
+        <mat-select [(ngModel)]="rating" formControlName="rating_ctrl">
+          <mat-option *ngFor="let c of ratings" [value]="c">{{c}}</mat-option>
+        </mat-select>
       </mat-form-field>
     </div>
 

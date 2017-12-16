@@ -13,10 +13,14 @@ export class ReviewService {
 
   getReviews(): Observable<Review[]> {
     return this.http.get(Server.routeTo(Routes.REVIEWS))
-      .map(res => res.json())
+      .map(res => { console.log(res.json());
+        return res.json()}
+        )
   }
 
   create(review: Review): Observable<Review> {
+    console.log("Create Review:");
+    console.log(review);
     return this.http.post(Server.routeTo(Routes.REVIEWS), review)
       .map(res => res.json())
   }
@@ -35,9 +39,4 @@ export class ReviewService {
     return this.http.put(Server.routeTo(Routes.REVIEWS) + '/' + review.id, review)
       .map(res => res.json())
   }
-
-  // sendMessage(id: number, message: String) {
-  //   return this.http.post(Server.routeTo(Routes.REVIEWS + '/' + id + '/message'), {message})
-  //     .map(res => res.json())
-  // }
 }
