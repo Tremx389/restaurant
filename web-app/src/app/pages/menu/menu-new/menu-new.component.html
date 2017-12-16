@@ -15,8 +15,8 @@
       <mat-form-field class="example-full-width">
         
         <mat-select [(ngModel)]="type" formControlName="type">
-          <mat-option value="0">FOOD</mat-option>
-          <mat-option value="1">DRINK</mat-option>
+          <mat-option value="FOOD" default>FOOD</mat-option>
+          <mat-option value="DRINK">DRINK</mat-option>
         </mat-select>
         <mat-error *ngIf="name.hasError('required')">
           Type is <strong>required</strong>

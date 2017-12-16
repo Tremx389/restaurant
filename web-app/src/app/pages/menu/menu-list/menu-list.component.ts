@@ -13,9 +13,10 @@ import {MenuService} from "../../../services/menu.service";
 
 export class MenuListComponent {
   displayedColumns: String[] = ['name', 'type', 'restaurant', 'edit'];
-  cities: DataSource<any> = new MenuDataSource(this.menuService);
+  menus: DataSource<any> = new MenuDataSource(this.menuService);
 
   constructor(private menuService: MenuService) {
+    console.log("A1");
   }
 
   delete(id: number) {
@@ -33,6 +34,7 @@ export class MenuDataSource extends DataSource<any> {
   }
 
   connect(): Observable<Menu[]> {
+    console.log("A3");
     return this.menuService.getMenus();
   }
 

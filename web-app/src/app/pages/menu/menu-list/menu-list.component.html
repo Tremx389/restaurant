@@ -4,18 +4,18 @@
 
   <mat-table #table [dataSource]="menus">
     <ng-container matColumnDef="name">
-      <mat-header-cell *matHeaderCellDef> Menu</mat-header-cell>
+      <mat-header-cell *matHeaderCellDef> Name</mat-header-cell>
       <mat-cell *matCellDef="let element"> {{element.name}}</mat-cell>
     </ng-container>
 
     <ng-container matColumnDef="type">
-      <mat-header-cell *matHeaderCellDef> Menu</mat-header-cell>
+      <mat-header-cell *matHeaderCellDef> Type</mat-header-cell>
       <mat-cell *matCellDef="let element"> {{element.type}}</mat-cell>
     </ng-container>
 
     <ng-container matColumnDef="restaurant">
-      <mat-header-cell *matHeaderCellDef> Menu</mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.restaurant}}</mat-cell>
+      <mat-header-cell *matHeaderCellDef> Restaurant</mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.restaurant.name}}</mat-cell>
     </ng-container>
 
     <ng-container matColumnDef="edit">

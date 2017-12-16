@@ -12,7 +12,7 @@ import {Router} from '@angular/router';
   styleUrls: ['./menu-new.component.css']
 })
 export class MenuNewComponent implements OnInit {
-  type: number = 0;
+  type: string = "FOOD";
   restaurant_id: number;
   restaurants: Restaurant[];
 

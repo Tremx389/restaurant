@@ -5,11 +5,11 @@
 
 export class Menu {
   id: number;
-  type: number;
+  type: String;
   name: String;
   restaurantId: number;
   
-  constructor(name?: String, type?: number, restaurantId?: number, id?: number) {
+  constructor(name?: String, type?: String, restaurantId?: number, id?: number) {
     this.id = id;
     this.name = name;
     this.type = type;
