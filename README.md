@@ -10,16 +10,16 @@ Az adatok csak belépett felhasználók számára láthatóak.
 # Backend
 
 ## Fejlesztői környezet
-*  Front-end
-*  - Sublime Text 3
-*  - ATOM
-*  - Node.js Command promt
-*  Back-end
-*  - Netbeans IDE
-*  Verziókövetés
-*  - Git
-*  Task Management
-*  - Wunderlist
+Front-end
+*  Sublime Text 3
+*  ATOM
+*  Node.js Command promt
+Back-end
+*  Netbeans IDE
+Verziókövetés
+*  Git
+Task Management
+*  Wunderlist
 
 ## Könyvtár struktúra
 ### Front-end
@@ -105,9 +105,8 @@ Az adatok csak belépett felhasználók számára láthatóak.
 *	felhasználónév: string
 *	jelszó: password
 
-## Könyvtárstruktúra
-
 ## Végpont-tervek és leírások
+### Backend - REST Api
 *	POST: /api/restaurants/ – étterem hozzáadása (étteremvezető)
 *	GET: /api/restaurants/ – éttermek lekérdezése (belépett user)
 *	GET: /api/restaurants/:id – adott étterem lekérdezése (belépett user)
@@ -134,8 +133,7 @@ Az adatok csak belépett felhasználók számára láthatóak.
 
 *	GET: /api/users/ – felhasználók lekérdezése (belépett user)
 
-### 3)	REST Api
-Frontend – oldalak megjelenítése (route)
+### Frontend – oldalak megjelenítése (route)
 *	/restaurants			éttermek listája
 *	/restaurants/:id		egy specifikus étterem
 *	/restaurants/:id/reviews	az adott étterem értékelései
@@ -146,3 +144,9 @@ Frontend – oldalak megjelenítése (route)
 *	/users				felhasználók listája
 *	/users/:id			adott felhasználó
 *	/users/:id/reviews		adott felhasználó értékelései
+
+## Use case diagramok
+![alt text](https://raw.githubusercontent.com/Tremx389/restaurant/master/usecase_etterem.png)
+![alt text](https://raw.githubusercontent.com/Tremx389/restaurant/master/usecase_menu.png)
+![alt text](https://raw.githubusercontent.com/Tremx389/restaurant/master/usecase_varos.png)
+![alt text](https://raw.githubusercontent.com/Tremx389/restaurant/master/usecase_ertekeles.png)
